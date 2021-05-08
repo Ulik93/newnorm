@@ -16,7 +16,6 @@ import Add from "./pages/News/Add/Add"
 import New from "./pages/News/New.jsx"
 import SignUp from "./pages/Sign/SignUp/SignUp"
 import FullCard from "./pages/News/FullCard/FullCard";
-import License from "./pages/License/License";
 function App() {
 	return (
 		<BrowserRouter>
@@ -35,8 +34,6 @@ function App() {
 				<Route path='/about' component={AboutUs} exact />
 				<Route path='/top' component={HeaderTop}/>
 				<Route path='/New' component={New}/>
-				<Route path='/license' component={License}/>
-
 				<Route path='/signup' component={SignUp}/>
 				<Route path="/News/:id" component={FullCard} />
 				<Redirect to='/' />
