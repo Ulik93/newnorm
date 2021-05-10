@@ -2,6 +2,11 @@
 	width: 1200px;
 	margin: 0 auto 0 auto;
 }
+
+.nav_link{
+	display: flex;
+	justify-content: space-around;
+}
 .equipments_row {
 	display: flex;
     flex-wrap: wrap;
@@ -52,7 +57,23 @@
 	font-family: 'Roboto', sans-serif;
 	line-height: 20px;
 }
-
+.staffs_cards_item_btn{
+	display: flex;
+	justify-content: center;
+	height: 7%;
+	align-items: center;
+}
+.modal_btn{
+	position: absolute;
+	top: 10;
+	right: 0;
+}
+.modal_x{
+	width: 20px;
+}
+.nav_link{
+	margin-top: 10px;
+}
 @media (max-width: 1380px) {
 	.equipments_wrapper {
 		max-width: 100%;

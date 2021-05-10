@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import axios from "./../../api/axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import firebase from "./../../config/FbConfig";
-import Loader from "react-loader-spinner"
 import "./Add.css";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 

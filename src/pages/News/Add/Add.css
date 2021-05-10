@@ -46,7 +46,6 @@ button {
 form {
   display: flex;
   flex-direction: column;
-  align-items: start;
   min-width: 380px;
 }
 
