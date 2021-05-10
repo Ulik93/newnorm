@@ -1,0 +1,6 @@
+export { default as Osh } from "./Osh"
+export { default as Batken } from "./Batken"
+export { default as JalalAbad } from "./JalalAbad"
+export { default as Naryn } from "./Naryn"
+export { default as Talas } from "./Talas"
+export { default as YssykKol } from "./YssykKol"
