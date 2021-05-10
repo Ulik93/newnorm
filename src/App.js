@@ -7,7 +7,7 @@ import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 import Alcohol from './pages/Alcohol/Alcohol'
 import Tekstil from './pages/Tekstil/Tekstil'
 import Shoes from './pages/Shoes/Tekstil'
-import Equipments from './pages/Equipments/Equipments'
+import EquipmentMain from './pages/Equipments/EquipmentMain'
 import Filials from "./pages/filials/filials";
 import AboutUs from "./pages/AboutUs/aboutUs";
 import Projects from "./pages/projects/projects.js";
@@ -16,7 +16,7 @@ import Add from "./pages/News/Add/Add"
 import New from "./pages/News/New.jsx"
 import SignUp from "./pages/Sign/SignUp/SignUp"
 import FullCard from "./pages/News/FullCard/FullCard";
-import License from "./pages/License/License";
+import License from "./pages/License/License"
 function App() {
 	return (
 		<BrowserRouter>
@@ -30,15 +30,15 @@ function App() {
 				<Route path='/alcohol' component={Alcohol} exact />
 				<Route path='/tekstil' component={Tekstil} exact />
 				<Route path='/shoes' component={Shoes} exact />
-				<Route path='/equipments' component={Equipments} exact />
+				<Route path='/equipments' component={EquipmentMain} exact />
 				<Route path='/filials' component={Filials} exact />
 				<Route path='/about' component={AboutUs} exact />
 				<Route path='/top' component={HeaderTop}/>
 				<Route path='/New' component={New}/>
-				<Route path='/license' component={License}/>
-
 				<Route path='/signup' component={SignUp}/>
 				<Route path="/News/:id" component={FullCard} />
+				<Route path="/license" component={License} />
+
 				<Redirect to='/' />
 			</Switch>
 			<Footer />

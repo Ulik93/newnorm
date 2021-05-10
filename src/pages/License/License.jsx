@@ -1,10 +1,10 @@
-import React from "react"
-import "./license.css"
-import SingleLicense from "./SingleLicense"
-import license1 from "./License__img/license1.jpg"
-import license2 from "./License__img/license2.jpg"
-import license3 from "./License__img/license3.jpg"
-import { useState } from "react"
+import React from "react";
+import "./license.css";
+import SingleLicense from "./SingleLicense";
+import license1 from "./License__img/license1.jpg";
+import license2 from "./License__img/license2.jpg";
+import license3 from "./License__img/license3.jpg";
+import { useState } from "react";
 
 const data = [
   {
@@ -26,11 +26,11 @@ const data = [
     title: "Свидетельство о государственной регистрации web‑системы СБИС",
     text: "Подтверждает авторские права на систему СБИС",
   },
-]
+];
 
 const License = () => {
-  const [showModal, setShowModal] = useState(false)
-  const [modalImg, setModalImg] = useState(null)
+  const [showModal, setShowModal] = useState(false);
+  const [modalImg, setModalImg] = useState(null);
 
   return (
     <div className="license__container">
@@ -46,10 +46,10 @@ const License = () => {
               key={item.id}
               {...item}
             />
-          )
+          );
         })}
       </div>
     </div>
-  )
-}
-export default License
+  );
+};
+export default License;

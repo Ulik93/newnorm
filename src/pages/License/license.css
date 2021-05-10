@@ -2,7 +2,6 @@
   max-width: 1200px;
   margin: 20px auto;
   min-height: 100vh;
-  /* background-image: url(./qwqwqw.png); */
 }
 
 .license__header {
@@ -43,6 +42,7 @@
     padding: 0 50px;
   }
 }
+
 @media only screen and (max-width: 900px) {
   .license__items {
     justify-content: center;
