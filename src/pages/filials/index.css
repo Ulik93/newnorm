@@ -71,7 +71,8 @@
 .filialLinksBatken,
 .filialLinksIssykKul,
 .filialLinksJalalAdad,
-.filialLinksNaryn {
+.filialLinksNaryn,
+.filialLinksChuy {
   cursor: pointer;
   background-position: center center;
   background-repeat: no-repeat;
@@ -82,7 +83,8 @@
 .filialLinksBatken div,
 .filialLinksIssykKul div,
 .filialLinksJalalAdad div,
-.filialLinksNaryn div {
+.filialLinksNaryn div,
+.filialLinksChuy div {
   margin: 0 auto;
   color: #ffffff;
   padding: 40px 0;
@@ -116,6 +118,10 @@
 
 .filialLinksNaryn {
   background-image: url("./photos/Naryn.jpg");
+}
+
+.filialLinksChuy {
+  background-image: url("./photos/Chuy.jpg");
 }
 
 .filials-active div {
