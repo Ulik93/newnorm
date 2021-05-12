@@ -7,7 +7,7 @@ import { useState } from "react";
 
 const customStyles = {
   content: {
-    top: "40%",
+    top: "50%",
     left: "50%",
     right: "auto",
     bottom: "auto",
@@ -61,7 +61,13 @@ export default function Equipments(props) {
                 <div className="staffs_cards_item_desc">{item.desc}</div>
               </div>
               <div className="staffs_cards_item_btn">
-                <button onClick={() => openModal(item.title)}>Заказать</button>
+                <button
+                  target="_blank"
+                  className="about_btn staff_card_button"
+                  onClick={() => openModal(item.title)}
+                >
+                  Заказать
+                </button>
               </div>
             </div>
           ))}
@@ -115,8 +121,9 @@ export default function Equipments(props) {
               type="text"
               placeholder="ddwdwdw"
             />
-            <button type='submit' href="/">
+            <button type="submit">
               Отправить
+          
             </button>
           </form>
         </Modal>
