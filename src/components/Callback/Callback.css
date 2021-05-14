@@ -26,6 +26,10 @@
     color: #FFFFFF;
     margin-left: 20px;
 }
+form {
+    display: flex;
+    align-items: center;
+}
 .callback_info_desc{
     font-weight: normal;
     font-size: 14px;
@@ -37,8 +41,11 @@
 }
 .callback_btn{
     padding: 15px;
-    margin-top: 0;
 }
+.callback_input button{
+    margin-top: 20px;
+}
+
 .callback_input input{
     width: 283px;
     height: 42px;

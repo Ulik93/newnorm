@@ -21,10 +21,9 @@ export default function Callback() {
         <div className="callback_input">
           <form action="http://185.29.184.52:3000/api/orders/phone/" method='post'>
           <input type="text" name='phone_number' placeholder="Ваш номер телефона" />
-          <button type='submit'>Отправить</button>
+          <button className='callback_btn about_btn' type='submit'>Отправить</button>
           </form>
         </div>
-        <div className="callback_btn about_btn">Отправить</div>
       </div>
     </div>
   );

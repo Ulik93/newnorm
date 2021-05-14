@@ -30,18 +30,18 @@ export default function Header() {
         <div className={show ? "navOpen nav" : "nav"}>
           {links.map((item) => {
             if (item.title !== "ОФД") {
-              if (item.title === "Эдо") {
-                return (
-                  <a
-                    key={item.title}
-                    target="_blank"
-                    href="http://edo.kg"
-                    className="nav_link"
-                  >
-                    Эдо
-                  </a>
-                );
-              }
+              // if (item.title === "Эдо") {
+              //   return (
+              //     <a
+              //       key={item.title}
+              //       target="_blank"
+              //       href="http://edo.kg"
+              //       className="nav_link"
+              //     >
+              //       Эдо
+              //     </a>
+              //   );
+              // }
               return (
                 <NavLink
                   key={item.title}

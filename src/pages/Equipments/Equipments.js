@@ -119,7 +119,7 @@ export default function Equipments(props) {
               name="product"
               value={title}
               type="text"
-              placeholder="ddwdwdw"
+              placeholder=""
             />
             <button type="submit">
               Отправить
