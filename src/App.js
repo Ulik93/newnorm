@@ -42,7 +42,6 @@ function App() {
 				<Redirect to='/' />
 			</Switch>
 			<Footer />
-			{/* <a href='https://api.whatsapp.com/send?phone=+996501588882' target='_blank' rel='noopener noreferrer' className='fab fa-whatsapp' ></a> */}
 		</BrowserRouter>
 	)
 }

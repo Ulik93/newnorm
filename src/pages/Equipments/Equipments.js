@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Equipments.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -6,7 +6,7 @@ import Modal from "react-modal";
 
 const customStyles = {
   content: {
-    top: "40%",
+    top: "55%",
     left: "50%",
     right: "auto",
     bottom: "auto",
@@ -18,6 +18,7 @@ const customStyles = {
 Modal.setAppElement("#root");
 
 export default function Equipments(props) {
+  const [title, setTitle] = useState('')
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -28,9 +29,12 @@ export default function Equipments(props) {
 
   var subtitle;
   const [modalIsOpen, setIsOpen] = React.useState(false);
-  function openModal() {
+  function openModal(message) {
     setIsOpen(true);
+    setTitle(message)
+    console.log(message);
   }
+  console.log(title);
   function afterOpenModal() {
     // references are now sync'd and can be accessed.
     subtitle.style.color = "#000";
@@ -57,7 +61,7 @@ export default function Equipments(props) {
                 <div className="staffs_cards_item_desc">{item.desc}</div>
               </div>
               <div className="staffs_cards_item_btn">
-                <button onClick={openModal}>Заказать</button>
+                <button onClick={() => openModal(item.title)}>Заказать</button>
               </div>
             </div>
           ))}
@@ -83,8 +87,10 @@ export default function Equipments(props) {
             <label>Название компании:</label>
             <input type="text" name='company' placeholder="Название компании" /> <br />
             <label>Адрес:</label>
-			<input type="text" name='address' placeholder="Адрес" />
-			<button type='submit'>Отправить</button>
+			      <input type="text" name='address' placeholder="Адрес" /> <br/>
+            <label>Название продукта: </label>
+            <input name='product' value={title}/>
+			      <button type='submit'>Отправить</button>
           </form>
         </Modal>
       </div>
