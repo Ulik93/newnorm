@@ -84,7 +84,7 @@ export default function Callback() {
         </div>
         <form className="callback_input" onSubmit={handleSubmit}>
           <input
-            type="text"
+            type="number"
             name="phone_number"
             placeholder="Ваш номер телефона"
             value={phoneNumber}

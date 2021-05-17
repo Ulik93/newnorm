@@ -125,7 +125,7 @@ export default function Equipments(props) {
               <label>Номер телефона:</label>
               <input
                 className="modal__equipment-input"
-                type="text"
+                type="number"
                 name="phone"
                 placeholder="Номер телефона"
                 onChange={handleChange}

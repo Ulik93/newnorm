@@ -3,17 +3,29 @@
   margin: 0 auto 0 auto;
 }
 
-.nav_link {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+/* SIDEBAR */
+
+.equipments-nav_link {
+  display: grid;
+  grid-template-columns: 330px auto;
+}
+.div {
+  display: grid;
+  margin: 2rem 0;
+  grid-template-columns: 330px;
+  grid-template-rows: repeat(auto-fit, 55px);
 }
 .nav_link-items {
-  margin: 15px 0 15px 0;
+  padding: 15px 10px;
+  color: black;
+  border-bottom: 1px rgba(148, 148, 148, 0.397) solid;
+  transition: all 0.2s linear;
 }
-.nav_link-items a {
+.nav_link-items:hover {
   text-decoration: none;
-  font-size: 14px;
+  color: white;
+  background-color: #033f84;
+  padding-left: 20px;
 }
 
 .equipments_row {
