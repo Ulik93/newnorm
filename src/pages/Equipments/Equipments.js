@@ -1,48 +1,57 @@
-import React, { useEffect } from "react";
-import "./Equipments.css";
-import Aos from "aos";
-import "aos/dist/aos.css";
-import Modal from "react-modal";
-import { useState } from "react";
+import React, { useEffect } from "react"
+import "./Equipments.css"
+import Aos from "aos"
+import "aos/dist/aos.css"
+import Modal from "react-modal"
+import { useState } from "react"
+import useForm from "./useForm"
+import validateInfo from "./validate"
 
 const customStyles = {
+  overlay: {
+    backgroundColor: "rgba(0, 0, 0, 0.7)",
+  },
   content: {
-    top: "50%",
+    top: "53%",
     left: "50%",
     right: "auto",
     bottom: "auto",
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
   },
-};
+}
 
-Modal.setAppElement("#root");
+Modal.setAppElement("#root")
 
 export default function Equipments(props) {
-  const [modalIsOpen, setIsOpen] = useState(false);
-  const [title, setTitle] = useState(null);
+  const [modalIsOpen, setIsOpen] = useState(false)
+  const [title, setTitle] = useState(null)
+  const { handleChange, values, handleFormSubmit, errors } = useForm(
+    title,
+    validateInfo,
+    closeModal
+  )
+  const { phone, address, first_name, company } = errors
 
-  React.useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  useEffect(() => {
-    Aos.init({ duration: 2000 });
-  }, []);
-
-  var subtitle;
+  var subtitle
   function openModal(title) {
-    setIsOpen(true);
-    setTitle(title);
+    setIsOpen(true)
+    setTitle(title)
   }
   function afterOpenModal() {
     // references are now sync'd and can be accessed.
-    subtitle.style.color = "#000";
+    subtitle.style.color = "#000"
   }
 
   function closeModal() {
-    setIsOpen(false);
+    setIsOpen(false)
   }
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    Aos.init({ duration: 2000 })
+  }, [])
+
   return (
     <div className="equipments">
       <div className="equipments_wrapper">
@@ -81,53 +90,95 @@ export default function Equipments(props) {
           style={customStyles}
           contentLabel="Example Modal"
         >
-          <h2 ref={(_subtitle) => (subtitle = _subtitle)}>
-            Заполните форму и мы свяжемся с Вами
-          </h2>
-          <button className="modal_btn" onClick={closeModal}>
-            <img
-              className="modal_x"
-              src="https://timebuild.com.ua/wp-content/themes/profremont/img/no.png"
-              alt=""
-            />
-          </button>
-          <form
-            action="http://185.29.184.52:3000/api/orders/safe_order_and_send_email/"
-            method="post"
-          >
-            <label>Имя и Фамилия:</label>
-            <input
-              type="text"
-              name="first_name"
-              placeholder="Имя и Фамилия"
-            />{" "}
-            <br />
-            <label>Номер телефона:</label>
-            <input type="text" name="phone" placeholder="Номер телефона" />{" "}
-            <br />
-            <label>Название компании:</label>
-            <input
-              type="text"
-              name="company"
-              placeholder="Название компании"
-            />{" "}
-            <br />
-            <label>Адрес:</label>
-            <input type="text" name="address" placeholder="Адрес" /> <br />
-            <label htmlFor="product">МАшина</label>
-            <input
-              name="product"
-              value={title}
-              type="text"
-              placeholder=""
-            />
-            <button type="submit">
-              Отправить
-          
-            </button>
-          </form>
+          <div className="modalContent">
+            {/* <img
+                className="modal_x"
+                src="https://timebuild.com.ua/wp-content/themes/profremont/img/no.png"
+                alt=""
+              /> */}
+            <span className="modal_x" onClick={closeModal}>
+              &times;
+            </span>
+            <div className="modal__header-container">
+              <h2
+                className="modal__title"
+                ref={(_subtitle) => (subtitle = _subtitle)}
+              >
+                Заполните форму и мы свяжемся с Вами
+              </h2>
+            </div>
+            <form>
+              <label>Имя:</label>
+              <input
+                className="modal__equipment-input"
+                type="text"
+                name="first_name"
+                placeholder="Имя"
+                onChange={handleChange}
+                value={values.first_name}
+              />
+              {first_name ? (
+                <p className="modal__eqipment-error">{first_name}</p>
+              ) : (
+                <br />
+              )}
+              <label>Номер телефона:</label>
+              <input
+                className="modal__equipment-input"
+                type="text"
+                name="phone"
+                placeholder="Номер телефона"
+                onChange={handleChange}
+                value={values.phone}
+              />
+              {phone ? (
+                <p className="modal__eqipment-error">{phone}</p>
+              ) : (
+                <br />
+              )}
+              <label>Название компании:</label>
+              <input
+                className="modal__equipment-input"
+                type="text"
+                name="company"
+                placeholder="Название компании"
+                onChange={handleChange}
+                value={values.company}
+              />
+              {company ? (
+                <p className="modal__eqipment-error">{company}</p>
+              ) : (
+                <br />
+              )}
+              <label>Адрес:</label>
+              <input
+                className="modal__equipment-input"
+                type="text"
+                name="address"
+                placeholder="Адрес"
+                onChange={handleChange}
+                value={values.address}
+              />
+              {address ? (
+                <p className="modal__eqipment-error">{address}</p>
+              ) : (
+                <br />
+              )}
+              <div>
+                Оборудование:
+                <span className="modal__equipment-name">{title}</span>
+              </div>
+              <button
+                className="about_btn modal__equipment-btn"
+                type="submit"
+                onClick={handleFormSubmit}
+              >
+                Отправить
+              </button>
+            </form>
+          </div>
         </Modal>
       </div>
     </div>
-  );
+  )
 }
