@@ -118,14 +118,11 @@ export default function Footer() {
           </div>
         </div>
 
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href={pdf}
+        <p
           className="footer__samoedno"
         >
           Лицензия ГАС КР №0062266 рег. №19065-3301-ООО
-        </a>
+        </p>
       </div>
     </footer>
   );

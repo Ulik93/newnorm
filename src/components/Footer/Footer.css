@@ -37,6 +37,7 @@
 }
 
 .footer__samoedno {
+	cursor: pointer;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 13px;
