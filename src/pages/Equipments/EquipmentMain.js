@@ -13,6 +13,11 @@ import img9 from "./10.png";
 import img10 from "./11.png";
 import img11 from "./12.png";
 import img12 from "./13.png";
+import img13 from "./14.jpg";
+import img14 from "./15.jpg";
+import img15 from "./16.jpg";
+
+
 
 export default function EquipmentMain() {
 
@@ -71,13 +76,36 @@ export default function EquipmentMain() {
           image: img8,
         },
       ];
+      const staffs4 = [
+        {
+          title: "ПОРТ-1000Ф",
+          desc: `Касса, которой можно управлять с телефона.
+          Встроенный компьютер.*
+          Работает на Windows, Android, Linux.`,
+          image: img13,
+        },
+        {
+          title: "ПОРТ - 600Ф",
+          desc: `Bluetooth / USB / LAN / Денежный ящик / Дисплей покупателя
+          В стандартной поставке 1С
+          Автоматический отрезчик кассовой ленты`,
+          image: img14,
+        },
+        {
+          title: "ПОРТ - 100Ф",
+          desc: `3 цвета: классический, черный, голубой.
+          Можно подключить любое периферийное устройство.
+          Удобна смена кассовой ленты.`,
+          image: img15,
+        },
+      ];
     return (
         <BrowserRouter>
             <div className="nav_link">
-            <NavLink to="/equipments">Терминалы сбора данных</NavLink>
-            <NavLink to="/scanners"> 2д сканеры </NavLink>
-            <NavLink to="/prom">промышленное оборудование</NavLink>
-            <NavLink to="control">контрольно кассовая техника</NavLink>
+            <NavLink className='nav_link-items about_btn' to="/equipments">Терминалы сбора данных</NavLink>
+            <NavLink className='nav_link-items about_btn'  to="/scanners"> 2д сканеры </NavLink>
+            <NavLink className='nav_link-items about_btn'  to="/prom">промышленное оборудование</NavLink>
+            <NavLink className='nav_link-items about_btn'  to="control">контрольно кассовая техника</NavLink>
             </div>
             <Route path="/equipments">
                 <Terminals data={staffs1}/>
@@ -89,7 +117,7 @@ export default function EquipmentMain() {
                 <Prom data={staffs3}/>
             </Route>
             <Route path="/control">
-                <ControlTech data={staffs3}/>
+                <ControlTech data={staffs4}/>
             </Route>
         </BrowserRouter>
     )

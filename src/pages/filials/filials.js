@@ -4,10 +4,28 @@ import "./media.css"
 
 import { Link } from "react-router-dom"
 import { useState } from "react"
-import { Batken, Osh, JalalAbad, Naryn, Talas, YssykKol } from "./FilialsInfo"
+import {
+  Batken,
+  Osh,
+  JalalAbad,
+  Naryn,
+  Talas,
+  YssykKol,
+  Chuy,
+} from "./FilialsInfo"
 
 const Filials = () => {
-  const [currentState, setCurrentState] = useState("osh")
+  const [currentState, setCurrentState] = useState("Osh")
+
+  const filialsName = [
+    { name: "Chuy", text: "Чуй" },
+    { name: "Osh", text: "Ош" },
+    { name: "Talas", text: "Талас" },
+    { name: "Batken", text: "Баткен" },
+    { name: "IssykKul", text: "Ыссык-Куль" },
+    { name: "JalalAdad", text: "Джалал-Абад" },
+    { name: "Naryn", text: "Нарын" },
+  ]
 
   return (
     <div className="filials">
@@ -23,64 +41,41 @@ const Filials = () => {
         </Link>
       </span>
       <div className="containerForInfo">
-        {currentState === "osh" && <Osh />}
-        {currentState === "talas" && <Talas />}
-        {currentState === "batken" && <Batken />}
-        {currentState === "issykkol" && <YssykKol />}
-        {currentState === "jalalabad" && <JalalAbad />}
-        {currentState === "naryn" && <Naryn />}
+        {currentState === "Osh" && <Osh />}
+        {currentState === "Talas" && <Talas />}
+        {currentState === "Batken" && <Batken />}
+        {currentState === "IssykKul" && <YssykKol />}
+        {currentState === "JalalAdad" && <JalalAbad />}
+        {currentState === "Naryn" && <Naryn />}
+        {currentState === "Chuy" && <Chuy />}
       </div>
       <div className="containerForFilials">
-        <div
-          onClick={() => setCurrentState("osh")}
-          className={`filialLinksOsh ${
-            currentState === "osh" && "filials-active"
-          }`}
-        >
-          <div>Ош</div>
-        </div>
-        <div
-          onClick={() => setCurrentState("talas")}
-          className={`filialLinksTalas ${
-            currentState === "talas" && "filials-active"
-          }`}
-        >
-          <div>Талас</div>
-        </div>
-        <div
-          onClick={() => setCurrentState("batken")}
-          className={`filialLinksBatken ${
-            currentState === "batken" && "filials-active"
-          }`}
-        >
-          <div>Баткен</div>
-        </div>
-        <div
-          onClick={() => setCurrentState("issykkol")}
-          className={`filialLinksIssykKul ${
-            currentState === "issykkol" && "filials-active"
-          }`}
-        >
-          <div>Ыссык-Куль</div>
-        </div>
-        <div
-          onClick={() => setCurrentState("jalalabad")}
-          className={`filialLinksJalalAdad ${
-            currentState === "jalalabad" && "filials-active"
-          }`}
-        >
-          <div>Джалал-Абад</div>
-        </div>
-        <div
-          onClick={() => setCurrentState("naryn")}
-          className={`filialLinksNaryn ${
-            currentState === "naryn" && "filials-active"
-          }`}
-        >
-          <div>Нарын</div>
-        </div>
+        {filialsName.map((item, index) => {
+          return (
+            <SingleFilial
+              setCurrentState={setCurrentState}
+              currentState={currentState}
+              name={item.name}
+              text={item.text}
+            />
+          )
+        })}
       </div>
     </div>
   )
 }
+
+const SingleFilial = ({ name, text, currentState, setCurrentState }) => {
+  return (
+    <div
+      onClick={() => setCurrentState(name)}
+      className={`filialLinks${name} ${
+        currentState === name && "filials-active"
+      }`}
+    >
+      <div>{text}</div>
+    </div>
+  )
+}
+
 export default Filials
