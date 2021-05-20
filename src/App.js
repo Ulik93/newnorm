@@ -18,6 +18,7 @@ import New from "./pages/News/New.jsx"
 import SignUp from "./pages/Sign/SignUp/SignUp"
 import FullCard from "./pages/News/FullCard/FullCard"
 import License from "./pages/License/License"
+import Privacypolicy from "./pages/policy/privacypolicy"
 function App() {
   return (
     <BrowserRouter>
@@ -39,7 +40,7 @@ function App() {
         <Route path="/signup" component={SignUp} />
         <Route path="/News/:id" component={FullCard} />
         <Route path="/license" component={License} />
-
+        <Route path="/privacypolicy" component={Privacypolicy} />
         <Redirect to="/" />
       </Switch>
       <Footer />
@@ -47,5 +48,4 @@ function App() {
     </BrowserRouter>
   )
 }
-
 export default App
