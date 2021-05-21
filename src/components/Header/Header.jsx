@@ -29,18 +29,6 @@ export default function Header() {
         <div className={show ? "navOpen nav" : "nav"}>
           {links.map((item) => {
             if (item.title !== "ОФД-НН") {
-              // if (item.title === "Эдо") {
-              //   return (
-              //     <a
-              //       key={item.title}
-              //       target="_blank"
-              //       href="/"
-              //       className="nav_link"
-              //     >
-              //       Эдо
-              //     </a>
-              //   );
-              // }
               return (
                 <NavLink
                   key={item.title}
@@ -97,4 +85,24 @@ export default function Header() {
       </div>
     </header>
   );
+}
+
+
+let Hover = () => {
+  return (
+    <div className="div">
+          <NavLink className="nav_link-items" to="/equipments">
+            Терминалы сбора данных
+          </NavLink>
+          <NavLink className="nav_link-items" to="/scanners">
+            2д сканеры
+          </NavLink>
+          <NavLink className="nav_link-items" to="/prom">
+            промышленное оборудование
+          </NavLink>
+          <NavLink className="nav_link-items" to="control">
+            контрольно кассовая техника
+          </NavLink>
+    </div>
+  )
 }

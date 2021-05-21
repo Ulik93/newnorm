@@ -42,11 +42,11 @@ export default function Footer() {
               <Link to="#">Документы</Link>
             </div>
             <div className="footer__links">
+              <NavLink to="/policy">
+                <div className="footer__link">Политика обработки персональных данных</div>
+              </NavLink>
               <div className="footer__link">Руководство пользователя</div>
               <div className="footer__link">Описание процессов</div>
-              <div className="footer__link">
-                Разрешение на обработку фискальных данных
-              </div>
               <div className="footer__link">
                 Договор на обработку фиксальных данных
               </div>

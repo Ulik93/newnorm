@@ -1,5 +1,13 @@
 .equipments_wrapper {
+<<<<<<< HEAD
+=======
+  max-width: 1200px;
+>>>>>>> 5471800633403039c47e37f5c93db2728db773bb
   margin: 0 auto 0 auto;
+}
+
+.staffs_cards_item{
+  margin-bottom: 1.5rem;
 }
 
 /* SIDEBAR */

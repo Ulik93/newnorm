@@ -3,6 +3,7 @@ import { BrowserRouter, NavLink, Route } from "react-router-dom"
 import ControlTech from "./Parts/ControlTech"
 import Prom from "./Parts/Prom"
 import Scanners from "./Parts/Scanners"
+import Printers from "./Parts/Printers"
 import Terminals from "./Parts/Terminals"
 import img1 from "../../components/Staffs/phone.jpg"
 import img2 from "../../components/Staffs/printer.jpg"
@@ -11,11 +12,17 @@ import img7 from "./7.png"
 import img8 from "./9.png"
 import img9 from "./10.png"
 import img10 from "./11.png"
-import img11 from "./12.png"
 import img12 from "./13.png"
-import img13 from "./14.jpg"
-import img14 from "./15.jpg"
 import img15 from "./16.jpg"
+import urovo40 from './urovo40.jpg'
+import urovo30 from './urovo30.jpg'
+import printerTSC from './printerTSC.jpg'
+import port600 from './port600.jpg'
+import scan1 from './scan1.jpg'
+import scan2 from './scan2.jpg'
+import toshiba from './toshiba.jpg'
+import urovo600 from './urovo600.jpg'
+import urovo700 from './urovo700.jpg'
 
 export default function EquipmentMain() {
   const staffs1 = [
@@ -25,42 +32,56 @@ export default function EquipmentMain() {
       image: img1,
     },
     {
-      title: "UROVO D8000",
-      desc: `Термотрансферный принтер UROVO D8000 отличает высокая эргономичность корпуса, простой и понятный для пользователя интерфейс, а также полный набор опций, соответствующих потребностям практически любой области применения.`,
-      image: img2,
+      title: "Urovo DT30",
+      desc: 'ТЕРМИНАЛ СБОРА ДАННЫХ UROVO DT30 / DT30-AZ2S9E4000 / ANDROID 9.0 / 2D IMAGER / ZEBRA SE4710 (SOFT DECODE) / BLUETOOTH / WI-FI / GSM / 2G / 4G (LTE) / 4G (LTE) / GPS / NFC / RAM 2 GB / ROM 16 GB / ВОСЬМИЯДЕРНЫЙ / OCTA-CORE 1.4GHZ / 3.2" / 480 X 320 / 32 КЛАВИШИ / 4500MAH / 280 G / IP 67',
+      image: urovo30
     },
     {
-      title: "IDZOR 9750BT 2D",
-      desc: `Сканер штрих-кодов IDZOR 9750BT Bluetooth 2D - Беспроводной сканер с радиусом действия 100 метров!`,
-      image: img3,
+      title: "UROVO DT40",
+      desc: 'ТЕРМИНАЛ СБОРА ДАННЫХ UROVO DT40 / DT40-SU3S9E4010 / ANDROID 9.0 / 1.8 GHZ / 8ХCORE, CORTEX A53 / QUALCOMM SD 450 / RAM 2 GB / ROM 16 GB / UROVO SE2030 / 2D IMAGER / 4.0" / 480 X 800 / 2G / 4G (LTE) / BLUETOOTH / GPS / GSM / WI-FI / 4500MAH / NFC / IP 67 / 240 G / 24 КЛАВИШИ',
+      image: urovo40,
     },
   ]
 
   const staffs2 = [
+    {
+      title: "IDZOR 9750BT 2D",
+      desc: `CКАНЕР ШТРИХ-КОДОВ IDZOR 9750BT 2D BLUETOOTH C ПОДСТАВКОЙ POGO PIN / ID9750BT-2D / BLUETOOTH / 2D IMAGE / USB / IP 43 / ДЛЯ ЕГАИС`,
+      image: img3,
+    },
+    {
+      title: "IDZOR 2200S 2D",
+      desc: `CКАНЕР ШТРИХ-КОДОВ IDZOR 2200S 2D СКАНЕР (ПРОВОДНОЙ) / ID2200S-2D / COM (RS-232) / 2D IMAGE / USB / IP 43 / ДЛЯ ЕГАИС / C ФУНКЦИИЕЙ АВТОМАТИЧЕСКОГО СКАНИРОВАНИЯ В РЕЖИМЕ СНА`,
+      image: scan1,
+    },
+    {
+      title: "IDZOR 9800 2D",
+      desc: `CКАНЕР ШТРИХ-КОДОВ IDZOR 9800 2D BLUETOOTH / C ПОДСТАВКОЙ / ID9800BT-2D / 2D IMAGE / USB / IP 54 / ДЛЯ ЕГАИС / BLUETOOTH`,
+      image: scan2,
+    },
+    
+  ]
+
+  const staffs3 = [
+    {
+      title: "TSC ML340P",
+      desc: 'Термопринтер этикеток TSC память 64Mb/128Mb качество печати 300 dpi скорость печати 127 мм/с ширина печати до 105,7 мм, интерфейс USB,RS-232, Ethernet,USB-Host. LCD. С отделителем этикеток.',
+      image: printerTSC
+    },
     {
       title: "Принтер печати на этикетках Printronix 8000",
       desc: `Печатает уникальные коды на самоклеящихся этикетках.`,
       image: img10,
     },
     {
-      title: "Станция Комплекс складских операций.",
-      desc: `Простое решение для проведения складских операций и ведения складского учета.`,
-      image: img11,
+      title: "Принтер печати на этикетках Printronix 8000Термопринтер этикеток Toshiba B-EX4D2",
+      desc: `Недорогой принтер, обладающий высоким качеством печати и большой производительностью.`,
+      image: toshiba,
     },
     {
       title: "Станция агрегации АР-10С. Линия М.",
       desc: `Предназначенная для ручной агрегации вторичных упаковок в короба.`,
       image: img12,
-    },
-  ]
-
-  const staffs3 = [
-    {
-      title: "ПОРТ-1000Ф",
-      desc: `Касса, которой можно управлять с телефона.
-          Встроенный компьютер.*
-          Работает на Windows, Android, Linux.`,
-      image: img7,
     },
     {
       title: "Станция послойной агрегации АР-30. Линия М.",
@@ -79,14 +100,14 @@ export default function EquipmentMain() {
       desc: `Касса, которой можно управлять с телефона.
           Встроенный компьютер.*
           Работает на Windows, Android, Linux.`,
-      image: img13,
+      image: img7,
     },
     {
       title: "ПОРТ - 600Ф",
       desc: `Bluetooth / USB / LAN / Денежный ящик / Дисплей покупателя
           В стандартной поставке 1С
           Автоматический отрезчик кассовой ленты`,
-      image: img14,
+      image: port600,
     },
     {
       title: "ПОРТ - 100Ф",
@@ -94,6 +115,23 @@ export default function EquipmentMain() {
           Можно подключить любое периферийное устройство.
           Удобна смена кассовой ленты.`,
       image: img15,
+    },
+  ]
+  const staff5 = [
+    {
+      title: "UROVO D8000",
+      desc: `Термотрансферный принтер UROVO D8000 отличает высокая эргономичность корпуса, простой и понятный для пользователя интерфейс, а также полный набор опций, соответствующих потребностям практически любой области применения.`,
+      image: img2,
+    },
+    {
+      title: "UROVO Термо принтер D6000",
+      desc: `ПРИНТЕР ПЕЧАТИ ЭТИКЕТОК UROVO D6000 / D6000-A1203U1R0B0W1`,
+      image: urovo600,
+    },
+    {
+      title: "UROVO Термотрансферный принтер D7000",
+      desc: `ПРИНТЕР ПЕЧАТИ ЭТИКЕТОК UROVO D7000 / D7000-A2203U1R1B1W1`,
+      image: urovo700,
     },
   ]
   return (
@@ -107,10 +145,19 @@ export default function EquipmentMain() {
             2д сканеры
           </NavLink>
           <NavLink className="nav_link-items" to="/prom">
-            промышленное оборудование
+            Промышленное оборудование
           </NavLink>
-          <NavLink className="nav_link-items" to="control">
-            контрольно кассовая техника
+          <NavLink className="nav_link-items" to="/control">
+            Контрольно кассовая техника
+          </NavLink>
+          <NavLink className="nav_link-items" to="/printer">
+            Принтеры
+          </NavLink>
+          <NavLink className="nav_link-items" to="/printer">
+            Оборудование для маркировки
+          </NavLink>
+          <NavLink className="nav_link-items" to="/printer">
+            Расходные материалы
           </NavLink>
         </div>
         <div>
@@ -125,6 +172,9 @@ export default function EquipmentMain() {
           </Route>
           <Route path="/control">
             <ControlTech data={staffs4} />
+          </Route>
+          <Route path="/printer">
+            <Printers data={staff5}/>
           </Route>
         </div>
       </div>

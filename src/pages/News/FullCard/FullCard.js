@@ -10,7 +10,7 @@ function FullCard() {
   const [postData, setPostData] = useState(null);
   useEffect(() => {
     axios
-      .get(`https://norma-76317-default-rtdb.firebaseio.com/news/${id}.json`)
+      .get(`https://norma-33eab-default-rtdb.firebaseio.com/news/${id}.json`)
       .then((r) => {
         setPostData(r.data);
       });
@@ -36,7 +36,7 @@ function FullCard() {
           {" "}
           <img src={postData.fileLink} alt="" className="photo" />
           <h2 className="fullcard__title">{postData.title}</h2>
-          <span className="fullcard__title">{postData.text}</span>
+          <span className="fullcard__subtitle">{postData.text}</span>
         </>
       ) : null}
     </div>

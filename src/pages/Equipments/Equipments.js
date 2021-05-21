@@ -38,6 +38,7 @@ export default function Equipments(props) {
     setIsOpen(true)
     setTitle(title)
   }
+  console.log(title);
   function afterOpenModal() {
     // references are now sync'd and can be accessed.
     subtitle.style.color = "#000"
@@ -70,6 +71,7 @@ export default function Equipments(props) {
                 <div className="staffs_cards_item_desc">{item.desc}</div>
               </div>
               <div className="staffs_cards_item_btn">
+
                 <button
                   target="_blank"
                   className="about_btn staff_card_button"

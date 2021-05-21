@@ -1,14 +1,16 @@
 import firebase from 'firebase'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyD7RXuYN5WUpTAQuaeo-CXVtzQk6hNRgt8",
-  authDomain: "norma-76317.firebaseapp.com",
-  projectId: "norma-76317",
-  storageBucket: "norma-76317.appspot.com",
-  messagingSenderId: "450736535565",
-  appId: "1:450736535565:web:032335b7879f91caa23d44"
+  apiKey: "AIzaSyBUeSmqrw_AOp29JghLqqm6mOqbDLmvSnQ",
+  authDomain: "norma-33eab.firebaseapp.com",
+  databaseURL: "https://norma-33eab-default-rtdb.firebaseio.com",
+  projectId: "norma-33eab",
+  storageBucket: "norma-33eab.appspot.com",
+  messagingSenderId: "801919466660",
+  appId: "1:801919466660:web:e57aa88f78062e44c1fa31"
 };
 
-firebase.initializeApp(firebaseConfig)
+
+firebase.initializeApp(firebaseConfig);
 
 export default firebase;
