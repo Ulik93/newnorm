@@ -51,6 +51,9 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { NavLink, Route, Router } from "react-router-dom";
 import axios from "axios";
+import Card from "./card/Card";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import Loader from "react-loader-spinner";
 
 export default function News() {
   const [state, setState] = useState({});
@@ -58,7 +61,7 @@ export default function News() {
     sumDateState = [];
   useEffect(() => {
     axios
-      .get("https://norma-76317-default-rtdb.firebaseio.com/news.json")
+      .get("https://norma-33eab-default-rtdb.firebaseio.com/news.json")
       .then((r) => {
         setState(r.data);
       });
@@ -80,31 +83,34 @@ export default function News() {
     });
     console.log(sumDateState);
   }
+  useEffect(() => {
+    axios
+      .get("https://norma-33eab-default-rtdb.firebaseio.com/news.json")
+      .then((r) => {
+        setState(r.data);
+      });
+  }, []);
 
   const Date = "16.03.2021";
   return (
     <div className="news">
+      <div data-aos="fade-up" className="news_title">
+        Новости
+      </div>
       <div className="news__content">
-        <div data-aos="fade-up" className="news_title">
-          Новости
-        </div>
-        {!!state
-          ? Object.keys(state).reverse().map((post) => {  
-              return (
-                <div key={post} className="news__item">
-                  <span className="news__date">{state[post].date}</span>
-                  <p className="news__title">{state[post].title}</p>
-                  <div className="news__pic">
-                    <img
-                      src={state[post].fileLink}
-                      alt={state[post].fileName}
-                    />
-                  </div>
-                  <span className="news__info">{state[post].text}</span>
-                </div>
-              );
-            })
+        <Loader
+          type="Puff"
+          color="#00BFFF"
+          height={100}
+          width={100}
+          timeout={3000}
+        />
+        {state !== null
+          ? Object.keys(state).map((item) => (
+              <Card data={state[item]} id={item} key={item} />
+            ))
           : null}
+
         <div className="news__item">
           <span className="news__date">13.04.2021</span>
           <p className="news__title">

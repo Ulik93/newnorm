@@ -40,7 +40,11 @@ function App() {
         <Route path="/signup" component={SignUp} />
         <Route path="/News/:id" component={FullCard} />
         <Route path="/license" component={License} />
+<<<<<<< HEAD
         <Route path="/policy" component={Privacypolicy}/>
+=======
+        <Route path="/privacypolicy" component={Privacypolicy} />
+>>>>>>> 05b064a403e4712f5105ee1ffddcad976f42a6f3
         <Redirect to="/" />
       </Switch>
       <Footer />
@@ -48,5 +52,4 @@ function App() {
     </BrowserRouter>
   )
 }
-
 export default App
