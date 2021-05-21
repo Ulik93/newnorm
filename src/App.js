@@ -10,7 +10,6 @@ import Tekstil from "./pages/Tekstil/Tekstil"
 import Shoes from "./pages/Shoes/Tekstil"
 import EquipmentMain from "./pages/Equipments/EquipmentMain"
 import Filials from "./pages/filials/filials"
-import AboutUs from "./pages/AboutUs/aboutUs"
 import Projects from "./pages/projects/projects.js"
 import HeaderTop from "./pages/News/components/HeaderTop"
 import Add from "./pages/News/Add/Add"
@@ -19,6 +18,8 @@ import SignUp from "./pages/Sign/SignUp/SignUp"
 import FullCard from "./pages/News/FullCard/FullCard"
 import License from "./pages/License/License"
 import Privacypolicy from "./pages/policy/privacypolicy"
+import Contacts from "./pages/ContactUs/ContactUs"
+import AboutUs from "./pages/About/aboutUs"
 function App() {
   return (
     <BrowserRouter>
@@ -34,17 +35,15 @@ function App() {
         <Route path="/shoes" component={Shoes} exact />
         <Route path="/equipments" component={EquipmentMain} exact />
         <Route path="/filials" component={Filials} exact />
+        <Route path="/contacts" component={Contacts} exact />
         <Route path="/about" component={AboutUs} exact />
         <Route path="/top" component={HeaderTop} />
         <Route path="/New" component={New} />
         <Route path="/signup" component={SignUp} />
         <Route path="/News/:id" component={FullCard} />
         <Route path="/license" component={License} />
-<<<<<<< HEAD
-        <Route path="/policy" component={Privacypolicy}/>
-=======
-        <Route path="/privacypolicy" component={Privacypolicy} />
->>>>>>> 05b064a403e4712f5105ee1ffddcad976f42a6f3
+        <Route path="/policy" component={Privacypolicy} />
+
         <Redirect to="/" />
       </Switch>
       <Footer />

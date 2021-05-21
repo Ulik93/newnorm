@@ -1,16 +1,7 @@
-<<<<<<< HEAD
-.privacypolicy-h1{
-    text-align: center;
-    line-height: 100px;
+.privacypolicy-h1 {
+  text-align: center;
+  line-height: 100px;
 }
-.privacypolicy{
-    padding: 0 2% 0 2%;
-=======
-.privacypolicy-h1{
-    text-align: center;
-    line-height: 100px;
-}
-.privacypolicy{
-    padding: 0 2% 0 2%;
->>>>>>> 05b064a403e4712f5105ee1ffddcad976f42a6f3
+.privacypolicy {
+  padding: 0 2% 0 2%;
 }

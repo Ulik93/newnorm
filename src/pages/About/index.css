@@ -1,0 +1,15 @@
+.aboutus__container {
+  background-color: #fff;
+  width: 1012px;
+  margin: 50px auto;
+}
+
+.aboutus__img {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.aboutus__list li {
+  list-style-type: disc;
+  margin: 0 40px;
+}
