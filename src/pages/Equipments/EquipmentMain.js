@@ -8,21 +8,28 @@ import Terminals from "./Parts/Terminals"
 import img1 from "../../components/Staffs/phone.jpg"
 import img2 from "../../components/Staffs/printer.jpg"
 import img3 from "../../components/Staffs/scaner.jpg"
-import img7 from "./7.png"
-import img8 from "./9.png"
-import img9 from "./10.png"
-import img10 from "./11.png"
-import img12 from "./13.png"
-import img15 from "./16.jpg"
-import urovo40 from './urovo40.jpg'
-import urovo30 from './urovo30.jpg'
-import printerTSC from './printerTSC.jpg'
-import port600 from './port600.jpg'
-import scan1 from './scan1.jpg'
-import scan2 from './scan2.jpg'
-import toshiba from './toshiba.jpg'
-import urovo600 from './urovo600.jpg'
-import urovo700 from './urovo700.jpg'
+import img7 from "./images/7.png"
+import img8 from "./images/9.png"
+import img9 from "./images/10.png"
+import img10 from "./images/11.png"
+import img12 from "./images/13.png"
+import img15 from "./images/16.jpg"
+import urovo40 from './images/urovo40.jpg'
+import urovo30 from './images/urovo30.jpg'
+import printerTSC from './images/printerTSC.jpg'
+import port600 from './images/port600.jpg'
+import scan1 from './images/scan1.jpg'
+import scan2 from './images/scan2.jpg'
+import toshiba from './images/toshiba.jpg'
+import urovo600 from './images/urovo600.jpg'
+import urovo700 from './images/urovo700.jpg'
+import rashod1 from './images/rashod1.jpg'
+import rashod2 from './images/rashod2.png'
+import rashod3 from './images/rashod3.jpg'
+import rashod4 from './images/rashod4.jpg'
+import rashod5 from './images/rashod5.jpg'
+import rashod6 from './images/rashod6.jpg'
+import Rashod from "./Parts/Rashod"
 
 export default function EquipmentMain() {
   const staffs1 = [
@@ -42,7 +49,6 @@ export default function EquipmentMain() {
       image: urovo40,
     },
   ]
-
   const staffs2 = [
     {
       title: "IDZOR 9750BT 2D",
@@ -61,7 +67,6 @@ export default function EquipmentMain() {
     },
     
   ]
-
   const staffs3 = [
     {
       title: "TSC ML340P",
@@ -134,6 +139,38 @@ export default function EquipmentMain() {
       image: urovo700,
     },
   ]
+  const staff6 = [
+    {
+      title: "Этикетки матовые BRADY B-424 101.6мм х 50.8мм brd30246",
+      desc: `THT-55-424-1 этикетки, матовая бумага, 101.6х50.8мм, 1000 шт. в рулоне.`,
+      image: rashod1,
+    },
+    {
+      title: "UROVO Термо принтер D6000Чековая лента 57х30х12 (1 рулон)",
+      desc: `Чековая лента (термо), ширина 57 мм, намотка 30 метров, втулка 12 мм, плотность материала 48 г/кв.м, 200 рулонов в коробке`,
+      image: rashod2,
+    },
+    {
+      title: "Этикетки полипропиленовые с шинным клеем BRADY 80мм х 44,5мм brdz113",
+      desc: `Полипропиленовая этикетка с шинным клеем 80мм х 44,5мм, 1000 шт.`,
+      image: rashod3,
+    },
+    {
+      title: "Пластиковые пружины 4,5 мм белые",
+      desc: `Пластиковые пружины 4,5 мм белые, 100 штук в упаковке. 21 кольцо. Для переплета 10-20 листов. Формат А4. Минимальный заказ на расходные материалы 2000 рублей!`,
+      image: rashod4,
+    },
+    {
+      title: "Evolis лента R2011",
+      desc: `Черная монохромная лента, 1000 карт`,
+      image: rashod5,
+    },
+    {
+      title: "Печатающая термоголовка Argox OS-2130-SB printhead 203dpi 23-80017-001",
+      desc: `Печатающая головка для принтера Argox OS-2130-SB / OS-2130DE-SB, 203dpi (34588)`,
+      image: rashod6,
+    },
+  ]
   return (
     <BrowserRouter>
       <div className="equipments-nav_link">
@@ -153,10 +190,7 @@ export default function EquipmentMain() {
           <NavLink className="nav_link-items" to="/printer">
             Принтеры
           </NavLink>
-          <NavLink className="nav_link-items" to="/printer">
-            Оборудование для маркировки
-          </NavLink>
-          <NavLink className="nav_link-items" to="/printer">
+          <NavLink className="nav_link-items" to="/rashod">
             Расходные материалы
           </NavLink>
         </div>
@@ -175,6 +209,9 @@ export default function EquipmentMain() {
           </Route>
           <Route path="/printer">
             <Printers data={staff5}/>
+          </Route>
+          <Route path="/rashod">
+            <Rashod data={staff6}/>
           </Route>
         </div>
       </div>
