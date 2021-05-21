@@ -1,7 +1,6 @@
 import React from "react";
 import "./Header.css";
 import { NavLink } from "react-router-dom";
-import ref from "../../refToLk.js";
 import logo from "./logo copy.png";
 
 export default function Header() {
@@ -29,19 +28,7 @@ export default function Header() {
           </NavLink>
         <div className={show ? "navOpen nav" : "nav"}>
           {links.map((item) => {
-            if (item.title !== "ОФД") {
-              // if (item.title === "Эдо") {
-              //   return (
-              //     <a
-              //       key={item.title}
-              //       target="_blank"
-              //       href="http://edo.kg"
-              //       className="nav_link"
-              //     >
-              //       Эдо
-              //     </a>
-              //   );
-              // }
+            if (item.title !== "ОФД-НН") {
               return (
                 <NavLink
                   key={item.title}
@@ -65,7 +52,7 @@ export default function Header() {
                   href="http://ofd.norma.kg"
                   className="nav_link"
                 >
-                  ОФД
+                  ОФД-НН
                 </a>
               );
             }
@@ -98,4 +85,24 @@ export default function Header() {
       </div>
     </header>
   );
+}
+
+
+let Hover = () => {
+  return (
+    <div className="div">
+          <NavLink className="nav_link-items" to="/equipments">
+            Терминалы сбора данных
+          </NavLink>
+          <NavLink className="nav_link-items" to="/scanners">
+            2д сканеры
+          </NavLink>
+          <NavLink className="nav_link-items" to="/prom">
+            промышленное оборудование
+          </NavLink>
+          <NavLink className="nav_link-items" to="control">
+            контрольно кассовая техника
+          </NavLink>
+    </div>
+  )
 }
