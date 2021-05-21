@@ -1,3 +1,7 @@
+.privacypolicy__container {
+  width: 1012px;
+  margin: 50px auto;
+}
 .privacypolicy-h1 {
   text-align: center;
   line-height: 100px;

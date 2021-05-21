@@ -2,7 +2,7 @@ import React from "react"
 import "./privacypolicy.css"
 const Privacypolicy = () => {
   return (
-    <div>
+    <div className="privacypolicy__container">
       <h1 className="privacypolicy-h1">
         Политика обработки персональных данных
       </h1>
