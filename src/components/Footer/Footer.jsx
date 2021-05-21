@@ -1,8 +1,8 @@
-import React from "react";
-import "./Footer.css";
-import pdf from "./license.pdf";
-import { Link, NavLink } from "react-router-dom";
-import { colors } from "@material-ui/core";
+import React from "react"
+import "./Footer.css"
+import pdf from "./license.pdf"
+import { Link, NavLink } from "react-router-dom"
+import { colors } from "@material-ui/core"
 
 export default function Footer() {
   const links = [
@@ -16,7 +16,7 @@ export default function Footer() {
       icons: "fab fa-youtube",
     },
     { href: "https://t.me/normakg", icons: "fab fa-telegram-plane" },
-  ];
+  ]
   return (
     <footer className="footer">
       <div className="container">
@@ -118,12 +118,10 @@ export default function Footer() {
           </div>
         </div>
 
-        <p
-          className="footer__samoedno"
-        >
+        <p className="footer__samoedno">
           Лицензия ГАС КР №0062266 рег. №19065-3301-ООО
         </p>
       </div>
     </footer>
-  );
+  )
 }
