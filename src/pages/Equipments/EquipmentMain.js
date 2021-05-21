@@ -174,7 +174,7 @@ export default function EquipmentMain() {
   return (
     <BrowserRouter>
       <div className="equipments-nav_link">
-        <div className="div">
+        <div className="equipment__sidebar">
           <NavLink className="nav_link-items" to="/equipments">
             Терминалы сбора данных
           </NavLink>

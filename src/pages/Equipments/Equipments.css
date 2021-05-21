@@ -3,7 +3,7 @@
   margin: 0 auto 0 auto;
 }
 
-.staffs_cards_item{
+.staffs_cards_item {
   margin-bottom: 1.5rem;
 }
 
@@ -12,8 +12,9 @@
 .equipments-nav_link {
   display: grid;
   grid-template-columns: 330px auto;
+  column-gap: 40px;
 }
-.div {
+.equipment__sidebar {
   display: grid;
   margin: 2rem 0;
   grid-template-columns: 330px;
@@ -146,8 +147,11 @@
 
 @media (max-width: 1380px) {
   .equipments_wrapper {
-    max-width: 100%;
     padding: 0 50px;
+  }
+
+  .staffs_cards_item {
+    max-width: 370px;
   }
 }
 
@@ -162,9 +166,18 @@
 }
 
 @media (max-width: 768px) {
+  .equipments-nav_link {
+    display: grid;
+    grid-template-columns: 100%;
+    row-gap: 40px;
+  }
   .equipments_wrapper {
-    max-width: 100%;
     padding: 0 15px;
+  }
+
+  .equipment__sidebar {
+    margin: 2rem 0;
+    grid-template-columns: 100%;
   }
 
   .modal_x {
