@@ -1,7 +1,8 @@
-import React from "react";
-import "./Header.css";
-import { NavLink } from "react-router-dom";
-import logo from "./logo copy.png";
+import React from "react"
+import "./Header.css"
+import { NavLink } from "react-router-dom"
+import logo from "./logo copy.png"
+import Submenu from "./Submenu"
 
 export default function Header() {
   const links = [
@@ -13,38 +14,40 @@ export default function Header() {
     { title: "Проекты", path: "/projects" },
     { title: "Новости", path: "/news" },
     { title: "Филиалы", path: "/filials" },
-  ];
-  const [show, setShow] = React.useState(true);
+  ]
+  const [show, setShow] = React.useState(true)
   React.useEffect(() => {
     if (window.matchMedia("(max-width:1147px)").matches) {
-      setShow(false);
+      setShow(false)
     }
-  }, []);
+  }, [])
   return (
     <header>
       <div className="header_wrapper">
-          <NavLink className="header_logo" to="/">
-            <img src={logo} alt="norma.kg logo" />
-          </NavLink>
+        <NavLink className="header_logo" to="/">
+          <img src={logo} alt="norma.kg logo" />
+        </NavLink>
         <div className={show ? "navOpen nav" : "nav"}>
           {links.map((item) => {
             if (item.title !== "ОФД-НН") {
               return (
                 <NavLink
-                  onMouseEnter={item.title === "Оборудование" ? <Hover/> : undefined}
                   key={item.title}
                   onClick={() => {
                     if (window.matchMedia("(max-width:1147px)").matches)
-                      setShow(false);
+                      setShow(false)
                   }}
                   to={item.path}
-                  className="nav_link"
+                  className={`nav_link ${
+                    item.title === "Оборудование" && "nav-link__hover-effect"
+                  }`}
                   activeClassName="nav_link-active"
                   exact
                 >
                   {item.title}
+                  <Submenu />
                 </NavLink>
-              );
+              )
             } else {
               return (
                 <a
@@ -55,7 +58,7 @@ export default function Header() {
                 >
                   ОФД-НН
                 </a>
-              );
+              )
             }
           })}
           <a
@@ -85,31 +88,5 @@ export default function Header() {
         </div>
       </div>
     </header>
-  );
-}
-
-
-let Hover = () => {
-  return (
-    <div className="div">
-          <NavLink className="nav_link-items" to="/equipments">
-            Терминалы сбора данных
-          </NavLink>
-          <NavLink className="nav_link-items" to="/scanners">
-            2д сканеры
-          </NavLink>
-          <NavLink className="nav_link-items" to="/prom">
-            Промышленное оборудование
-          </NavLink>
-          <NavLink className="nav_link-items" to="/control">
-            Контрольно кассовая техника
-          </NavLink>
-          <NavLink className="nav_link-items" to="/printer">
-            Принтеры
-          </NavLink>
-          <NavLink className="nav_link-items" to="/rashod">
-            Расходные материалы
-          </NavLink>
-    </div>
   )
 }
