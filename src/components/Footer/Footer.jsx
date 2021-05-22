@@ -1,8 +1,8 @@
-import React from "react";
-import "./Footer.css";
-import pdf from "./license.pdf";
-import { Link, NavLink } from "react-router-dom";
-import { colors } from "@material-ui/core";
+import React from "react"
+import "./Footer.css"
+import pdf from "./license.pdf"
+import { Link, NavLink } from "react-router-dom"
+import { colors } from "@material-ui/core"
 
 export default function Footer() {
   const links = [
@@ -16,7 +16,7 @@ export default function Footer() {
       icons: "fab fa-youtube",
     },
     { href: "https://t.me/normakg", icons: "fab fa-telegram-plane" },
-  ];
+  ]
   return (
     <footer className="footer">
       <div className="container">
@@ -42,11 +42,13 @@ export default function Footer() {
               <Link to="#">Документы</Link>
             </div>
             <div className="footer__links">
+              <NavLink to="/policy">
+                <div className="footer__link">
+                  Политика обработки персональных данных
+                </div>
+              </NavLink>
               <div className="footer__link">Руководство пользователя</div>
               <div className="footer__link">Описание процессов</div>
-              <div className="footer__link">
-                Разрешение на обработку фискальных данных
-              </div>
               <div className="footer__link">
                 Договор на обработку фиксальных данных
               </div>
@@ -58,15 +60,18 @@ export default function Footer() {
 
           <div className="footer__column">
             <div className="footer__title">
-              <Link to="/about">Контакты</Link>
+              <Link to="/contacts">Контакты</Link>
             </div>
-            <div style={{ color: "white" }} className="footer__links">
-              О нас
-            </div>
+
+            <NavLink to="/about">
+              <div style={{ color: "white" }} className="footer__links">
+                О нас
+              </div>
+            </NavLink>
             <div className="footer__links">
               <div className="footer__link">
-                Адрес: 720030, г. Бишкек,{" "}
-                <div style={{ marginTop: 7 }}>улица Баялинова 146</div>{" "}
+                Адрес: 720030, г. Бишкек,
+                <div style={{ marginTop: 7 }}>улица Баялинова 146</div>
               </div>
 
               <div className="footer__link">
@@ -76,13 +81,12 @@ export default function Footer() {
                   href="tel:+996501588882"
                 >
                   +996 501 588 882
-                </a>{" "}
+                </a>
                 - call-center
               </div>
 
               <div className="footer__link">
                 <span>
-                  {" "}
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
@@ -101,7 +105,7 @@ export default function Footer() {
                   >
                     +996 312 888 882
                   </a>
-                </span>{" "}
+                </span>
               </div>
               {links.map((item) => (
                 <a
@@ -118,12 +122,10 @@ export default function Footer() {
           </div>
         </div>
 
-        <p
-          className="footer__samoedno"
-        >
+        <p className="footer__samoedno">
           Лицензия ГАС КР №0062266 рег. №19065-3301-ООО
         </p>
       </div>
     </footer>
-  );
+  )
 }
