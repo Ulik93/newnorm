@@ -11,6 +11,7 @@ export default function Header() {
     { title: "ОФД-НН", path: "http://ofd.norma.kg" },
     { title: "Эдо", path: "/edo" },
     { title: "Оборудование", path: "/equipments" },
+    { title: "ККМ", path: "/control" },
     { title: "Проекты", path: "/projects" },
     { title: "Новости", path: "/news" },
     { title: "Филиалы", path: "/filials" },
@@ -42,6 +43,7 @@ export default function Header() {
                     item.title === "Оборудование" && "nav-link__hover-effect"
                   }`}
                   activeClassName="nav_link-active"
+                  className="nav_link"
                   exact
                 >
                   {item.title}

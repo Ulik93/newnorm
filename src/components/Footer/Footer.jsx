@@ -48,7 +48,7 @@ export default function Footer() {
                 </div>
               </NavLink>
               <div className="footer__link">Руководство пользователя</div>
-              <div className="footer__link">Описание процессов</div>
+              {/* <div className="footer__link">Описание процессов</div> */}
               <div className="footer__link">
                 Договор на обработку фиксальных данных
               </div>

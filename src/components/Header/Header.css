@@ -77,6 +77,11 @@ header {
 .nav_link-active {
   border-bottom: 1px solid #b7b7b7;
 }
+
+.divHover{
+	display: none;
+}
+
 @media (max-width: 1147px) {
   .fa-phone-alt,
   .nav_lang {
