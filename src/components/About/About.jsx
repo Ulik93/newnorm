@@ -27,7 +27,7 @@ export default function About() {
           предложения для покупателей. Наша миссия сделать работу удобнее и
           прозрачнее.{" "}
         </div>
-        <a target='_blank' href="https://www.youtube.com/channel/UCCV0dJ9NpQ2C1X9lLY8fspw">
+        <a target="_blank" href="https://www.youtube.com/channel/UCCV0dJ9NpQ2C1X9lLY8fspw">
         <div onClick={() => setOpen(true)} className="about_btn">
           Youtube
         </div>

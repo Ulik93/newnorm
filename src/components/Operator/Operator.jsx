@@ -5,7 +5,6 @@ import img1 from "./Rectangle 13.png"
 import img2 from "./Rectangle 14.png"
 import img3 from "./Rectangle 15.png"
 import img4 from "./Rectangle 16.png"
-import ref from "../../refToLk.js"
 import Aos from "aos"
 import "aos/dist/aos.css"
 export default function Operator() {

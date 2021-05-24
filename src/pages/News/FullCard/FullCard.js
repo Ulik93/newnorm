@@ -33,7 +33,7 @@ function FullCard() {
     <div className="container complex__info fullcard">
       {postData ? (
         <>
-          {" "}
+         
           <img src={postData.fileLink} alt="" className="photo" />
           <h2 className="fullcard__title">{postData.title}</h2>
           <span className="fullcard__subtitle">{postData.text}</span>
