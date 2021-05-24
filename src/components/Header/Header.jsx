@@ -10,6 +10,7 @@ export default function Header() {
     { title: "ОФД-НН", path: "http://ofd.norma.kg" },
     { title: "Эдо", path: "/edo" },
     { title: "Оборудование", path: "/equipments" },
+    { title: "ККМ", path: "/control" },
     { title: "Проекты", path: "/projects" },
     { title: "Новости", path: "/news" },
     { title: "Филиалы", path: "/filials" },
@@ -31,15 +32,14 @@ export default function Header() {
             if (item.title !== "ОФД-НН") {
               return (
                 <NavLink
-                  onMouseEnter={item.title === "Оборудование" ? <Hover/> : undefined}
                   key={item.title}
                   onClick={() => {
                     if (window.matchMedia("(max-width:1147px)").matches)
                       setShow(false);
                   }}
                   to={item.path}
-                  className="nav_link"
                   activeClassName="nav_link-active"
+                  className="nav_link"
                   exact
                 >
                   {item.title}
@@ -86,30 +86,4 @@ export default function Header() {
       </div>
     </header>
   );
-}
-
-
-let Hover = () => {
-  return (
-    <div className="div">
-          <NavLink className="nav_link-items" to="/equipments">
-            Терминалы сбора данных
-          </NavLink>
-          <NavLink className="nav_link-items" to="/scanners">
-            2д сканеры
-          </NavLink>
-          <NavLink className="nav_link-items" to="/prom">
-            Промышленное оборудование
-          </NavLink>
-          <NavLink className="nav_link-items" to="/control">
-            Контрольно кассовая техника
-          </NavLink>
-          <NavLink className="nav_link-items" to="/printer">
-            Принтеры
-          </NavLink>
-          <NavLink className="nav_link-items" to="/rashod">
-            Расходные материалы
-          </NavLink>
-    </div>
-  )
 }

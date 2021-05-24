@@ -20,7 +20,37 @@ import License from "./pages/License/License"
 import Privacypolicy from "./pages/policy/privacypolicy"
 import Contacts from "./pages/ContactUs/ContactUs"
 import AboutUs from "./pages/About/aboutUs"
+import ControlTech from "./pages/Equipments/Parts/ControlTech"
+import img7 from "./pages/Equipments/images/7.png"
+import port600 from "./pages/Equipments/images/port600.jpg"
+import img15 from "./pages/Equipments/images/16.jpg"
+
 function App() {
+
+  const staffs4 = [
+    {
+      title: "ПОРТ-1000Ф",
+      desc: `Касса, которой можно управлять с телефона.
+          Встроенный компьютер.*
+          Работает на Windows, Android, Linux.`,
+      image: img7,
+    },
+    {
+      title: "ПОРТ - 600Ф",
+      desc: `Bluetooth / USB / LAN / Денежный ящик / Дисплей покупателя
+          В стандартной поставке 1С
+          Автоматический отрезчик кассовой ленты`,
+      image: port600,
+    },
+    {
+      title: "ПОРТ - 100Ф",
+      desc: `3 цвета: классический, черный, голубой.
+          Можно подключить любое периферийное устройство.
+          Удобна смена кассовой ленты.`,
+      image: img15,
+    },
+  ]
+
   return (
     <BrowserRouter>
       <Header />
@@ -42,12 +72,10 @@ function App() {
         <Route path="/signup" component={SignUp} />
         <Route path="/News/:id" component={FullCard} />
         <Route path="/license" component={License} />
-<<<<<<< HEAD
-        <Route path="/policy" component={Privacypolicy}/>
-=======
         <Route path="/policy" component={Privacypolicy} />
-
->>>>>>> e67926771a3d18f20fa045e3f60f958c52345a42
+        <Route path="/control">
+            <ControlTech data={staffs4} />
+          </Route>
         <Redirect to="/" />
       </Switch>
       <Footer />
