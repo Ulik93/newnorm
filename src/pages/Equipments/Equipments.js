@@ -31,8 +31,7 @@ export default function Equipments(props) {
     validateInfo,
     closeModal
   )
-  const { phone, address, first_name, company, email, files } = errors
-
+  const { phone, address, first_name, email, files } = errors
   var subtitle
   function openModal(title) {
     setIsOpen(true)
@@ -110,6 +109,7 @@ export default function Equipments(props) {
               </h2>
             </div>
             <form>
+              {/* Имя */}
               <label>Имя:</label>
               <input
                 className="modal__equipment-input"
@@ -124,6 +124,7 @@ export default function Equipments(props) {
               ) : (
                 <br />
               )}
+              {/* Номер телефона */}
               <label>Номер телефона:</label>
               <input
                 className="modal__equipment-input"
@@ -138,6 +139,7 @@ export default function Equipments(props) {
               ) : (
                 <br />
               )}
+              {/* Название компании */}
               <label>Название компании:</label>
               <input
                 className="modal__equipment-input"
@@ -147,15 +149,16 @@ export default function Equipments(props) {
                 onChange={handleChange}
                 value={values.company}
               />
+              {/* файлы */}
                 <label>Перетащите все файлы:</label>
-              <input 
-                className="modal__equipment-input"
-                type="file"
-                name="files[]"
-                placeholder="Files"
-                onChange={handleChange}
-                value={values.company}
-              multiple />
+                <input
+                 type="file"
+                 name="files" 
+                 accept=".jpg, .jpeg, .png"
+                 onChange={handleChange}
+                 placeholder="Перетащите файлы"
+                  multiple
+                  />
               {files ? (
                 <p className="modal__eqipment-error">{files}</p>
               ) : (
