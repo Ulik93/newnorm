@@ -42,12 +42,7 @@ function App() {
         <Route path="/signup" component={SignUp} />
         <Route path="/News/:id" component={FullCard} />
         <Route path="/license" component={License} />
-<<<<<<< HEAD
-        <Route path="/policy" component={Privacypolicy}/>
-=======
         <Route path="/policy" component={Privacypolicy} />
-
->>>>>>> e67926771a3d18f20fa045e3f60f958c52345a42
         <Redirect to="/" />
       </Switch>
       <Footer />
