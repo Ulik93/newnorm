@@ -43,7 +43,6 @@ export default function Header() {
                     item.title === "Оборудование" && "nav-link__hover-effect"
                   }`}
                   activeClassName="nav_link-active"
-                  className="nav_link"
                   exact
                 >
                   {item.title}
