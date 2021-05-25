@@ -31,7 +31,7 @@ export default function Equipments(props) {
     validateInfo,
     closeModal
   )
-  const { phone, address, first_name, company } = errors
+  const { phone, address, first_name, company, email, files } = errors
 
   var subtitle
   function openModal(title) {
@@ -147,8 +147,17 @@ export default function Equipments(props) {
                 onChange={handleChange}
                 value={values.company}
               />
-              {company ? (
-                <p className="modal__eqipment-error">{company}</p>
+                <label>Перетащите все файлы:</label>
+              <input 
+                className="modal__equipment-input"
+                type="file"
+                name="files[]"
+                placeholder="Files"
+                onChange={handleChange}
+                value={values.company}
+              multiple />
+              {files ? (
+                <p className="modal__eqipment-error">{files}</p>
               ) : (
                 <br />
               )}
@@ -163,6 +172,20 @@ export default function Equipments(props) {
               />
               {address ? (
                 <p className="modal__eqipment-error">{address}</p>
+              ) : (
+                <br />
+              )}
+              <label>Электронная почта:</label>
+              <input
+                className="modal__equipment-input"
+                type="text"
+                name="email"
+                placeholder="email"
+                onChange={handleChange}
+                value={values.email}
+              />
+              {email ? (
+                <p className="modal__eqipment-error">{email}</p>
               ) : (
                 <br />
               )}

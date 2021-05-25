@@ -14,6 +14,7 @@ import partner8 from "./partners/8.png";
 import partner9 from "./partners/megacom.png";
 import partner10 from "./partners/mtk.png";
 import partner12 from "./partners/mmc.jpg";
+import partnerx from "./partners/tpp-kg.jpg";
 
 export default function Partners() {
   SwiperCore.use([Autoplay]);
@@ -95,6 +96,14 @@ export default function Partners() {
           <div className="swiper_partners">
             <a target='_blank' href="https://www.megacom.kg/">
               <img src={partner9} />
+            </a>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className="swiper_partners">
+          {" "}
+          <div className="swiper_partners">
+            <a target='_blank' href="http://cci.kg/">
+              <img src={partnerx} />
             </a>
           </div>
         </SwiperSlide> 
