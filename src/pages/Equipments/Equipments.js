@@ -126,7 +126,7 @@ export default function Equipments(props) {
               <label>Номер телефона:</label>
               <input
                 className="modal__equipment-input"
-                type="number"
+                type="text"
                 name="phone"
                 placeholder="Номер телефона"
                 onChange={handleChange}
@@ -146,18 +146,8 @@ export default function Equipments(props) {
                 onChange={handleChange}
                 value={values.company}
               />
-              <label>Перетащите все файлы:</label>
-              <input
-                className="modal__equipment-input"
-                type="file"
-                name="files[]"
-                placeholder="Files"
-                onChange={handleChange}
-                value={values.company}
-                multiple
-              />
-              {files ? (
-                <p className="modal__eqipment-error">{files}</p>
+              {phone ? (
+                <p className="modal__eqipment-error">{phone}</p>
               ) : (
                 <br />
               )}
