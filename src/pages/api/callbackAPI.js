@@ -10,7 +10,7 @@ export const sendCallbackNumber = (phone_number) => {
 
 export const sendEquipmentForm = (data) => {
   axios
-    .post("https://2ba5a9a9f889.ngrok.io/api/orders/kkm/", {
+    .post("https://dbbd0bbbe229.ngrok.io/api/orders/kkm/", {
       ...data,
     })
     .catch((error) => {
