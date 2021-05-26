@@ -38,7 +38,7 @@ export default function Equipments(props) {
     setIsOpen(true)
     setTitle(title)
   }
-  console.log(title);
+  console.log(title)
   function afterOpenModal() {
     // references are now sync'd and can be accessed.
     subtitle.style.color = "#000"
@@ -71,7 +71,6 @@ export default function Equipments(props) {
                 <div className="staffs_cards_item_desc">{item.desc}</div>
               </div>
               <div className="staffs_cards_item_btn">
-
                 <button
                   target="_blank"
                   className="about_btn staff_card_button"
@@ -127,7 +126,7 @@ export default function Equipments(props) {
               <label>Номер телефона:</label>
               <input
                 className="modal__equipment-input"
-                type="number"
+                type="text"
                 name="phone"
                 placeholder="Номер телефона"
                 onChange={handleChange}
@@ -147,17 +146,8 @@ export default function Equipments(props) {
                 onChange={handleChange}
                 value={values.company}
               />
-                <label>Перетащите все файлы:</label>
-              <input 
-                className="modal__equipment-input"
-                type="file"
-                name="files[]"
-                placeholder="Files"
-                onChange={handleChange}
-                value={values.company}
-              multiple />
-              {files ? (
-                <p className="modal__eqipment-error">{files}</p>
+              {phone ? (
+                <p className="modal__eqipment-error">{phone}</p>
               ) : (
                 <br />
               )}

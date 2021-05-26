@@ -42,7 +42,6 @@
   flex-direction: column;
   margin-top: 40px;
   margin-left: 200px;
-  padding: 35px;
   max-width: 900px;
   color: #ffffff;
 }
@@ -52,11 +51,6 @@
   font-weight: 800;
   margin-top: 20px;
   padding-top: 0;
-}
-
-.text {
-  font-weight: 800;
-  font-size: 16px;
 }
 
 .containerForFilials {

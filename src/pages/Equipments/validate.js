@@ -17,5 +17,9 @@ export default function validateInfo(values) {
     errors.address = "Обязательное поле"
   }
 
+  if (!values.email) {
+    errors.email = "Обязательное поле"
+  }
+
   return errors
 }
