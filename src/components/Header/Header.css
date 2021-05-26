@@ -78,8 +78,8 @@ header {
   border-bottom: 1px solid #b7b7b7;
 }
 
-.divHover{
-	display: none;
+.divHover {
+  display: none;
 }
 
 @media (max-width: 1147px) {
@@ -139,6 +139,7 @@ header {
 }
 
 /* SUBMENU */
+
 .nav-link__hover-effect:hover .navbar__submenu {
   display: grid;
   position: absolute;
