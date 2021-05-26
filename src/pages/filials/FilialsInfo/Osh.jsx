@@ -20,6 +20,24 @@ const Osh = () => {
         IX веку н. э., что всё равно позволяет считать его старейшим городом
         страны.
       </span>
+
+      <h4>
+        Адрес: Город Ош, ул. Касымбекова, д. 20Г
+      </h4>
+
+      <div className="containerForYandexMap">
+        <iframe 
+        src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad3b9f909a86fb063de4b54687973e7c5c64f9d1671d785c1501a93c6beba04a9&amp;source=constructor" 
+        width="500" 
+        height="400" 
+        frameborder="0">
+        </iframe>
+      </div>
+
+      <h3>
+        Номер: 0555 73 22 11
+      </h3>
+
     </>
   )
 }
