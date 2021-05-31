@@ -6,6 +6,8 @@ import Modal from "react-modal"
 import { useState } from "react"
 import useForm from "./useForm"
 import validateInfo from "./validate"
+import Button from '@material-ui/core/Button';
+
 
 const customStyles = {
   overlay: {
@@ -25,6 +27,7 @@ Modal.setAppElement("#root")
 
 export default function Equipments(props) {
   const [modalIsOpen, setIsOpen] = useState(false)
+  const [selectedProductInfo, setSelectedProductInfo] = useState({})
   const [title, setTitle] = useState(null)
   const { handleChange, values, handleFormSubmit, errors } = useForm(
     title,
@@ -34,9 +37,10 @@ export default function Equipments(props) {
   const { phone, address, first_name, company } = errors
 
   var subtitle
-  function openModal(title) {
+  function openModal(title, image) {
     setIsOpen(true)
     setTitle(title)
+    setSelectedProductInfo({productImage: image})
   }
   console.log(title);
   function afterOpenModal() {
@@ -72,13 +76,15 @@ export default function Equipments(props) {
               </div>
               <div className="staffs_cards_item_btn">
 
-                <button
-                  target="_blank"
+                <Button
+                color="red"
+                variant="contained" color="primary" href="#contained-buttons"
                   className="about_btn staff_card_button"
-                  onClick={() => openModal(item.title)}
+                  onClick={() => openModal(item.title, item.image)}
                 >
                   Заказать
-                </button>
+                </Button>
+
               </div>
             </div>
           ))}
@@ -147,6 +153,15 @@ export default function Equipments(props) {
                 onChange={handleChange}
                 value={values.company}
               />
+               <label>Файлы:</label>
+              <input
+              multiple
+                className="modal__equipment-input"
+                type="file"
+                name="file"
+                placeholder="Название компании"
+                onChange={handleChange}
+              />
               {company ? (
                 <p className="modal__eqipment-error">{company}</p>
               ) : (
@@ -169,7 +184,9 @@ export default function Equipments(props) {
               <div>
                 Оборудование:
                 <span className="modal__equipment-name">{title}</span>
+                <img className="modal__image" src={selectedProductInfo.productImage} alt="image" />
               </div>
+
               <button
                 className="about_btn modal__equipment-btn"
                 type="submit"
