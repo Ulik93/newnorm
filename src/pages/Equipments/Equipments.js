@@ -34,7 +34,7 @@ export default function Equipments(props) {
     validateInfo,
     closeModal
   )
-  const { phone, address, first_name, company } = errors
+  const { phone, address, first_name, company, email, files } = errors
 
   var subtitle
   function openModal(title, image) {
@@ -42,7 +42,7 @@ export default function Equipments(props) {
     setTitle(title)
     setSelectedProductInfo({productImage: image})
   }
-  console.log(title);
+  console.log(title)
   function afterOpenModal() {
     // references are now sync'd and can be accessed.
     subtitle.style.color = "#000"
@@ -75,10 +75,15 @@ export default function Equipments(props) {
                 <div className="staffs_cards_item_desc">{item.desc}</div>
               </div>
               <div className="staffs_cards_item_btn">
+<<<<<<< HEAD
 
                 <Button
                 color="red"
                 variant="contained" color="primary" href="#contained-buttons"
+=======
+                <button
+                  target="_blank"
+>>>>>>> 2c5db36cdea95376edd7cf2d149f3d9af07c3fda
                   className="about_btn staff_card_button"
                   onClick={() => openModal(item.title, item.image)}
                 >
@@ -133,7 +138,7 @@ export default function Equipments(props) {
               <label>Номер телефона:</label>
               <input
                 className="modal__equipment-input"
-                type="number"
+                type="text"
                 name="phone"
                 placeholder="Номер телефона"
                 onChange={handleChange}
@@ -153,6 +158,7 @@ export default function Equipments(props) {
                 onChange={handleChange}
                 value={values.company}
               />
+<<<<<<< HEAD
                <label>Файлы:</label>
               <input
               multiple
@@ -164,6 +170,10 @@ export default function Equipments(props) {
               />
               {company ? (
                 <p className="modal__eqipment-error">{company}</p>
+=======
+              {phone ? (
+                <p className="modal__eqipment-error">{phone}</p>
+>>>>>>> 2c5db36cdea95376edd7cf2d149f3d9af07c3fda
               ) : (
                 <br />
               )}
@@ -178,6 +188,20 @@ export default function Equipments(props) {
               />
               {address ? (
                 <p className="modal__eqipment-error">{address}</p>
+              ) : (
+                <br />
+              )}
+              <label>Электронная почта:</label>
+              <input
+                className="modal__equipment-input"
+                type="text"
+                name="email"
+                placeholder="email"
+                onChange={handleChange}
+                value={values.email}
+              />
+              {email ? (
+                <p className="modal__eqipment-error">{email}</p>
               ) : (
                 <br />
               )}

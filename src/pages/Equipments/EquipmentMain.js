@@ -185,7 +185,7 @@ export default function EquipmentMain() {
             Промышленное оборудование
           </NavLink>
           <NavLink className="nav_link-items" to="/control">
-            Контрольно кассовая техника
+            Контрольно кассовая машина
           </NavLink>
           <NavLink className="nav_link-items" to="/printer">
             Принтеры
