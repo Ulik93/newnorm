@@ -1,17 +1,17 @@
 import React from "react"
 import "./Header.css"
 import { NavLink } from "react-router-dom"
-import logo from "./logo copy.png"
+import logo from "./flogo.jpeg"
 import Submenu from "./Submenu"
 
 export default function Header() {
   const links = [
     { title: "Главная", path: "/" },
-    { title: "Возможности", path: "/capabilities" },
+    // { title: "Возможности", path: "/capabilities" },
+    { title: "Возможности", path: "/" },
     { title: "ОФД-НН", path: "http://ofd.norma.kg" },
-    { title: "Эдо", path: "/edo" },
+    // { title: "Эдо", path: "/edo" },
     { title: "Оборудование", path: "/equipments" },
-    { title: "ККМ", path: "/control" },
     { title: "Проекты", path: "/projects" },
     { title: "Новости", path: "/news" },
     { title: "Филиалы", path: "/filials" },

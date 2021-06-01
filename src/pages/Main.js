@@ -12,12 +12,10 @@ export default function Main() {
   }, []);
   return (
     <>
-      
       <Operator />
       <MarkirovkaAbout />
       <ForMarkirovka />
       <About />
-
       <Staffs />
       <Partners />
       <Callback />

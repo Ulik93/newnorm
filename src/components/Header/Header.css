@@ -144,9 +144,9 @@ header {
   display: grid;
   position: absolute;
   background-color: white;
-  left: 0;
+  left: 12.5%;
   padding: 15px;
-  width: 100%;
+  width: 75%;
   opacity: 1;
   visibility: visible;
 }

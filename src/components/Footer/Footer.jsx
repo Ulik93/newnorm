@@ -1,10 +1,13 @@
-import React from "react"
+import React, { useEffect } from "react"
 import "./Footer.css"
-import pdf from "./license.pdf"
-import { Link, NavLink } from "react-router-dom"
-import { colors } from "@material-ui/core"
+import { Link, NavLink, useLocation } from "react-router-dom"
 
 export default function Footer() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   const links = [
     {
       href: "https://api.whatsapp.com/send?phone=+996501588882",
