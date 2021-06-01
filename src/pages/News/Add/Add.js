@@ -56,40 +56,40 @@ function Add() {
       <div className="wrapper">
         <div className="container3">
           <div className="add">
-              <form action="#" className="add__form">
+              <form action="https://54eef70ccd1a.ngrok.io/api/equipments/equipments/" method='POST' className="add__form">
                 <h2 className="add__title add__place">Добавить новости</h2>
                 <div className="add__label add__data-label">
                   Дата
-                  <input
+                  {/* <input
                     className="form-control add__input add__date"
                     type="date"
                     onChange={changeHandler}
                     name="date"
-                    value={news.date}
-                  />
+                    // value={news.date}
+                  /> */}
                 </div>
                 <input
                   type="text"
                   className="form-control"
                   placeholder="Введите заголовок"
-                  onChange={changeHandler}
-                  name="title"
-                  value={news.title}
+                  // onChange={changeHandler}
+                  name="description"
+                  // value={news.title}
                 />
                 <textarea
                   className="form-control add__text"
                   placeholder="Напишите текст"
-                  onChange={changeHandler}
-                  value={news.text}
-                  name="text"
+                  // onChange={changeHandler}
+                  // value={news.text}
+                  name="title"
                 ></textarea>
                 <input
                   type="file"
                   className="form-control-file"
-                  name="file"
-                  onChange={fileChangeHandler}
+                  name="image"
+                  // onChange={fileChangeHandler}
                 />
-                <button className="btn btn-primary add__btn" onClick={addNews}>
+                <button className="btn btn-primary add__btn" type='submit'>
                   Добавить
                 </button>
               </form>

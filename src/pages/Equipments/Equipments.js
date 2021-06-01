@@ -22,7 +22,6 @@ const customStyles = {
 }
 
 Modal.setAppElement("#root")
-
 export default function Equipments(props) {
   const [modalIsOpen, setIsOpen] = useState(false)
   const [title, setTitle] = useState(null)
@@ -63,7 +62,7 @@ export default function Equipments(props) {
               className="staffs_cards_item"
             >
               <div className="staffs_cards_item_img">
-                <img src={item.image} alt="image" />
+                <img src={item.image} alt='image' />
               </div>
               <div className="staffs_cards_item_description">
                 <div className="staffs_cards_item_title">{item.title}</div>
@@ -71,7 +70,7 @@ export default function Equipments(props) {
               </div>
               <div className="staffs_cards_item_btn">
                 <button
-                  target="_blank"
+                  target='_blank'
                   className="about_btn staff_card_button"
                   onClick={() => openModal(item.title)}
                 >

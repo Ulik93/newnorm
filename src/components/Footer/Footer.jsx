@@ -1,10 +1,12 @@
 import React from "react"
 import "./Footer.css"
-import pdf from "./license.pdf"
-import { Link, NavLink } from "react-router-dom"
-import { colors } from "@material-ui/core"
-
+import { Link, NavLink, useLocation,  } from "react-router-dom"
+import {useEffect} from "react"
 export default function Footer() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   const links = [
     {
       href: "https://api.whatsapp.com/send?phone=+996501588882",
@@ -47,14 +49,16 @@ export default function Footer() {
                   Политика обработки персональных данных
                 </div>
               </NavLink>
-              <div className="footer__link">Руководство пользователя</div>
-              {/* <div className="footer__link">Описание процессов</div> */}
               <div className="footer__link">
                 Договор на обработку фиксальных данных
               </div>
               <NavLink to="/license">
                 <div className="footer__link">Лицензии и сертификаты</div>
               </NavLink>
+              <div className="footer__link">Руководство пользователя</div>
+              {/* <div className="footer__link">Описание процессов</div> */}
+            
+              
             </div>
           </div>
 

@@ -14,6 +14,7 @@ import partner9 from "./partners/megacom.png";
 import partner10 from "./partners/mtk.png";
 import partner12 from "./partners/mmc.jpg";
 import partnerx from "./partners/tpp-kg.jpg";
+import codify from "./partners/codify.png";
 
 export default function Partners() {
   SwiperCore.use([Autoplay]);
@@ -36,7 +37,7 @@ export default function Partners() {
         <SwiperSlide className="swiper_partners">
           {" "}
           <div className="swiper_partners">
-            <a target="_blank" href="https://www.trekmark.ru/">
+            <a target='_blank' href="https://www.trekmark.ru/">
               <img src={partner1} />
             </a>
           </div>
@@ -44,7 +45,15 @@ export default function Partners() {
         <SwiperSlide className="swiper_partners">
           {" "}
           <div className="swiper_partners">
-            <a target="_blank" href="https://sbis.ru/">
+            <a target='_blank' href="https://www.codifylab.com/">
+              <img src={codify} />
+            </a>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className="swiper_partners">
+          {" "}
+          <div className="swiper_partners">
+            <a target='_blank' href="https://sbis.ru/">
               <img src={partner2} />
             </a>
           </div>
@@ -53,7 +62,7 @@ export default function Partners() {
         <SwiperSlide className="swiper_partners">
           {" "}
           <div className="swiper_partners">
-            <a target="_blank" href="https://www.rightscan.ru/download-center/solutions/rs-mobile-acs/">
+            <a target='_blank' href="https://www.rightscan.ru/download-center/solutions/rs-mobile-acs/">
               <img src={partner4} />
             </a>
           </div>
@@ -69,7 +78,7 @@ export default function Partners() {
         <SwiperSlide className="swiper_partners">
           {" "}
           <div className="swiper_partners">
-            <a target="_blank" href="http://lora.kg/">
+            <a target='_blank' href="http://lora.kg/">
               <img src={partner6} />
             </a>
           </div>
@@ -77,7 +86,7 @@ export default function Partners() {
         <SwiperSlide className="swiper_partners">
           {" "}
           <div className="swiper_partners">
-            <a target="_blank" href="https://eurasiabusiness.ru/">
+            <a target='_blank' href="https://eurasiabusiness.ru/">
               <img src={partner7} />
             </a>
           </div>
@@ -85,7 +94,7 @@ export default function Partners() {
         <SwiperSlide className="swiper_partners">
           {" "}
           <div className="swiper_partners">
-            <a target="_blank" href="https://www.cleverence.ru/">
+            <a target='_blank' href="https://www.cleverence.ru/">
               <img src={partner8} />
             </a>
           </div>
@@ -106,7 +115,7 @@ export default function Partners() {
             </a>
           </div>
         </SwiperSlide> 
-        {/* сайты жок партнерлор*/}
+        {/* */}
          <SwiperSlide className="swiper_partners">
           {" "}
           <div className="swiper_partners">

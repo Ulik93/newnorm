@@ -25,7 +25,7 @@ export default function Operator() {
           <div className="markirovkaAbout_info-btn">
             <a
               href="http://ofd.norma.kg/"
-              target="_blank"
+              target='_blank'
               className="about_btn markirovkaAbout_btn operator_btn"
             >
               Подключить

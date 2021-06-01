@@ -1,32 +1,31 @@
-import "./assets/css/index.css"
-import React from "react"
-import Footer from "./components/Footer/Footer"
-import Header from "./components/Header/Header"
-import Main from "./pages/Main"
-import News from "./pages/News/News.js"
-import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom"
-import Alcohol from "./pages/Alcohol/Alcohol"
-import Tekstil from "./pages/Tekstil/Tekstil"
-import Shoes from "./pages/Shoes/Tekstil"
-import EquipmentMain from "./pages/Equipments/EquipmentMain"
-import Filials from "./pages/filials/filials"
-import Projects from "./pages/projects/projects.js"
-import HeaderTop from "./pages/News/components/HeaderTop"
-import Add from "./pages/News/Add/Add"
-import New from "./pages/News/New.jsx"
-import SignUp from "./pages/Sign/SignUp/SignUp"
-import FullCard from "./pages/News/FullCard/FullCard"
-import License from "./pages/License/License"
-import Privacypolicy from "./pages/policy/privacypolicy"
-import Contacts from "./pages/ContactUs/ContactUs"
-import AboutUs from "./pages/About/aboutUs"
-import ControlTech from "./pages/Equipments/Parts/ControlTech"
-import img7 from "./pages/Equipments/images/7.png"
-import port600 from "./pages/Equipments/images/port600.jpg"
-import img15 from "./pages/Equipments/images/16.jpg"
+import "./assets/css/index.css";
+import React from "react";
+import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
+import Main from "./pages/Main";
+import News from "./pages/News/News.js";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+import Alcohol from "./pages/Alcohol/Alcohol";
+import Tekstil from "./pages/Tekstil/Tekstil";
+import Shoes from "./pages/Shoes/Tekstil";
+import EquipmentMain from "./pages/Equipments/EquipmentMain";
+import Filials from "./pages/filials/filials";
+import Projects from "./pages/projects/projects.js";
+import HeaderTop from "./pages/News/components/HeaderTop";
+import Add from "./pages/News/Add/Add";
+import New from "./pages/News/New.jsx";
+import SignUp from "./pages/Sign/SignUp/SignUp";
+import FullCard from "./pages/News/FullCard/FullCard";
+import License from "./pages/License/License";
+import Privacypolicy from "./pages/policy/privacypolicy";
+import Contacts from "./pages/ContactUs/ContactUs";
+import AboutUs from "./pages/About/aboutUs";
+import ControlTech from "./pages/Equipments/Parts/ControlTech";
+import img7 from "./pages/Equipments/images/7.png";
+import port600 from "./pages/Equipments/images/port600.jpg";
+import img15 from "./pages/Equipments/images/16.jpg";
 
 function App() {
-
   const staffs4 = [
     {
       title: "ПОРТ-1000Ф",
@@ -49,7 +48,7 @@ function App() {
           Удобна смена кассовой ленты.`,
       image: img15,
     },
-  ]
+  ];
 
   return (
     <BrowserRouter>
@@ -74,13 +73,13 @@ function App() {
         <Route path="/license" component={License} />
         <Route path="/policy" component={Privacypolicy} />
         <Route path="/control">
-            <ControlTech data={staffs4} />
-          </Route>
+          <ControlTech data={staffs4} />
+        </Route>
         <Redirect to="/" />
       </Switch>
       <Footer />
       {/* <a href='https://api.whatsapp.com/send?phone=+996501588882' target='_blank' rel='noopener noreferrer' className='fab fa-whatsapp' ></a> */}
     </BrowserRouter>
-  )
+  );
 }
-export default App
+export default App;
