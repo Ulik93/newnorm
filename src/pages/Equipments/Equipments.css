@@ -198,3 +198,7 @@
     cursor: pointer;
   }
 }
+
+  .modal__image{
+    max-width: 100px;
+  }

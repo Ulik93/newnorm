@@ -6,6 +6,8 @@ import Modal from "react-modal"
 import { useState } from "react"
 import useForm from "./useForm"
 import validateInfo from "./validate"
+import Button from '@material-ui/core/Button';
+
 
 const customStyles = {
   overlay: {
@@ -25,20 +27,22 @@ Modal.setAppElement("#root")
 
 export default function Equipments(props) {
   const [modalIsOpen, setIsOpen] = useState(false)
+  const [selectedProductInfo, setSelectedProductInfo] = useState({})
   const [title, setTitle] = useState(null)
   const { handleChange, values, handleFormSubmit, errors } = useForm(
     title,
     validateInfo,
     closeModal
   )
-  const { phone, address, first_name, email } = errors
+  const { phone, address, first_name, company } = errors
 
   var subtitle
-  function openModal(title) {
+  function openModal(title, image) {
     setIsOpen(true)
     setTitle(title)
+    setSelectedProductInfo({productImage: image})
   }
-  console.log(title)
+  console.log(title);
   function afterOpenModal() {
     // references are now sync'd and can be accessed.
     subtitle.style.color = "#000"
@@ -71,13 +75,16 @@ export default function Equipments(props) {
                 <div className="staffs_cards_item_desc">{item.desc}</div>
               </div>
               <div className="staffs_cards_item_btn">
-                <button
-                  target="_blank"
+
+                <Button
+                color="red"
+                variant="contained" color="primary" href="#contained-buttons"
                   className="about_btn staff_card_button"
-                  onClick={() => openModal(item.title)}
+                  onClick={() => openModal(item.title, item.image)}
                 >
                   Заказать
-                </button>
+                </Button>
+
               </div>
             </div>
           ))}
@@ -126,7 +133,7 @@ export default function Equipments(props) {
               <label>Номер телефона:</label>
               <input
                 className="modal__equipment-input"
-                type="text"
+                type="number"
                 name="phone"
                 placeholder="Номер телефона"
                 onChange={handleChange}
@@ -146,8 +153,17 @@ export default function Equipments(props) {
                 onChange={handleChange}
                 value={values.company}
               />
-              {phone ? (
-                <p className="modal__eqipment-error">{phone}</p>
+               <label>Файлы:</label>
+              <input
+              multiple
+                className="modal__equipment-input"
+                type="file"
+                name="file"
+                placeholder="Название компании"
+                onChange={handleChange}
+              />
+              {company ? (
+                <p className="modal__eqipment-error">{company}</p>
               ) : (
                 <br />
               )}
@@ -165,23 +181,10 @@ export default function Equipments(props) {
               ) : (
                 <br />
               )}
-              <label>Электронная почта:</label>
-              <input
-                className="modal__equipment-input"
-                type="text"
-                name="email"
-                placeholder="email"
-                onChange={handleChange}
-                value={values.email}
-              />
-              {email ? (
-                <p className="modal__eqipment-error">{email}</p>
-              ) : (
-                <br />
-              )}
               <div>
                 Оборудование:
                 <span className="modal__equipment-name">{title}</span>
+                <img className="modal__image" src={selectedProductInfo.productImage} alt="image" />
               </div>
               <button
                 className="about_btn modal__equipment-btn"
