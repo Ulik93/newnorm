@@ -58,7 +58,6 @@ function SignUp() {
         <input
           name="first_password"
           onChange={changeHandler}
-          type="text"
           placeholder="Ваш пароль ..."
           className="form-control"
           type="password"
@@ -66,7 +65,6 @@ function SignUp() {
         <input
           name="second_password"
           onChange={changeHandler}
-          type="text"
           placeholder="Повторите пароль ..."
           className="form-control"
           type="password"

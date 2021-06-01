@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import "./MarkirovkaAbout.css";
 import Carousel from "react-bootstrap/Carousel";
-import img1 from "./Rectangle 61.png";
+import img1 from "./pic1.png";
 import img2 from "./Rectangle 62.png";
 import img3 from "./Rectangle 63.png";
 import ref from "../../refToLk.js";

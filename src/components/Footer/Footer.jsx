@@ -1,7 +1,8 @@
-import React from "react"
+import React, { useEffect } from "react"
 import "./Footer.css"
-import { Link, NavLink, useLocation,  } from "react-router-dom"
-import {useEffect} from "react"
+
+import { Link, NavLink, useLocation } from "react-router-dom"
+
 export default function Footer() {
   const { pathname } = useLocation();
   useEffect(() => {

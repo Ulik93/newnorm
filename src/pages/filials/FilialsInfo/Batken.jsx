@@ -22,7 +22,9 @@ const Batken = () => {
         Адрес: Область Баткен, р. Кадамжай, ул. Орозбекова, д. 102
       </h4>
       <div className="containerForYandexMap">
-         <iframe
+
+         <iframe 
+         title="1"
          src="https://yandex.ru/map-widget/v1/?um=constructor%3Af950eb0d97dbda51c18872447b9ad6aa3c47203d9530b440eec15eb30fdf8c85&amp;source=constructor" 
          width="500" height="400" 
          frameborder="0">
