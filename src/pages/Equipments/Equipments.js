@@ -33,12 +33,8 @@ export default function Equipments(props) {
     validateInfo,
     closeModal
   )
-<<<<<<< HEAD
-  const { phone, address, first_name, email, files } = errors
-=======
   const { phone, address, first_name, company } = errors
 
->>>>>>> c9d62cf288bf62d9d1f274a4b424b294951cba08
   var subtitle
   function openModal(title, image) {
     setIsOpen(true)
@@ -71,26 +67,18 @@ export default function Equipments(props) {
               className="staffs_cards_item"
             >
               <div className="staffs_cards_item_img">
-<<<<<<< HEAD
-                <img src={item.image} alt='image' />
-=======
                 <img src={item.image} alt="#" />
->>>>>>> c9d62cf288bf62d9d1f274a4b424b294951cba08
               </div>
               <div className="staffs_cards_item_description">
                 <div className="staffs_cards_item_title">{item.title}</div>
                 <div className="staffs_cards_item_desc">{item.desc}</div>
               </div>
               <div className="staffs_cards_item_btn">
-<<<<<<< HEAD
-                <button
-                  target='_blank'
-=======
+
 
                 <Button
                 color="red"
                 variant="contained" color="primary" href="#contained-buttons"
->>>>>>> c9d62cf288bf62d9d1f274a4b424b294951cba08
                   className="about_btn staff_card_button"
                   onClick={() => openModal(item.title, item.image)}
                 >
@@ -168,21 +156,7 @@ export default function Equipments(props) {
                 onChange={handleChange}
                 value={values.company}
               />
-<<<<<<< HEAD
-              {/* файлы */}
-                <label>Перетащите все файлы:</label>
-                <input
-                 type="file"
-                 name="files" 
-                 accept=".jpg, .jpeg, .png"
-                 onChange={handleChange}
-                 placeholder="Перетащите файлы"
-                  multiple
-                  />
 
-              {files ? (
-                <p className="modal__eqipment-error">{files}</p>
-=======
                <label>Файлы:</label>
               <input
               multiple
@@ -194,7 +168,6 @@ export default function Equipments(props) {
               />
               {company ? (
                 <p className="modal__eqipment-error">{company}</p>
->>>>>>> c9d62cf288bf62d9d1f274a4b424b294951cba08
               ) : (
                 <br />
               )}
