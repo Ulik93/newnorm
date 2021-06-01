@@ -1,11 +1,11 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useHistory, useParams } from "react-router-dom";
-import firebase from "./../../config/FbConfig";
+import {useParams } from "react-router-dom";
+//import firebase from "./../../config/FbConfig";
 import "./FullCard.css";
 
 function FullCard() {
-  let history = useHistory();
+  //let history = useHistory();
   let { id } = useParams();
   const [postData, setPostData] = useState(null);
   useEffect(() => {
@@ -15,20 +15,20 @@ function FullCard() {
         setPostData(r.data);
       });
   }, []);
-  let removePost = (e) => {
-    let desertRef = firebase
-      .storage()
-      .ref()
-      .child(`images/${postData.fileName}`);
-    firebase
-      .database()
-      .ref("news/" + id )
-      .remove()
-      .then(() => {
-        desertRef.delete();
-        history.push('/news')
-      });
-  };
+  // let removePost = (e) => {
+  //   let desertRef = firebase
+  //     .storage()
+  //     .ref()
+  //     .child(`images/${postData.fileName}`);
+  //   firebase
+  //     .database()
+  //     .ref("news/" + id )
+  //     .remove()
+  //     .then(() => {
+  //       desertRef.delete();
+  //       history.push('/news')
+  //     });
+  // };
   return (
     <div className="container complex__info fullcard">
       {postData ? (

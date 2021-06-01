@@ -16,7 +16,7 @@ const Projects = () => {
       <div className="projects__wrapper">
         <div data-aos="fade-down" className="projects__content">
           <div className="projects__content-item">
-            <a target="_blank" href="http://expokyrgyz.com/">
+            <a target='_blank' rel="noopener noreferrer" href="http://expokyrgyz.com/">
               <div className="projects__content-items">
                 <img src={expologo} alt="" />
               </div>
@@ -29,7 +29,7 @@ const Projects = () => {
       <div className="projects__wrapper">
         <div data-aos="fade-down" className="projects__content">
           <div className="projects__content-item">
-            <a target="_blank" href="http://lora.kg/">
+            <a target="_blank" rel="noopener noreferrer" href="http://lora.kg/">
               <div className="projects__content-items">
                 <img src={lora} alt="" />
               </div>

@@ -54,6 +54,7 @@ export default function Header() {
                 <a
                   key={item.title}
                   target="_blank"
+                  rel="noopener noreferrer"
                   href="http://ofd.norma.kg"
                   className="nav_link"
                 >
@@ -67,11 +68,12 @@ export default function Header() {
             rel="noopener noreferrer"
             className="fas fa-phone-alt"
             href="tel:+996501588882"
-          ></a>
+          >.</a>
           <span className="nav_lang">RU</span>
           <span className="login">
             <a
               target="_blank"
+              rel="noopener noreferrer"
               href="http://lk.norma.kg/"
               className="login_button"
             >

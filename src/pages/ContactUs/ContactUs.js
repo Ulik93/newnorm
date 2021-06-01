@@ -1,6 +1,6 @@
 import React from "react"
 import "./index.css"
-import { Link } from "react-router-dom"
+//import { Link } from "react-router-dom"
 
 const Contacts = () => {
   return (
@@ -36,6 +36,7 @@ const Contacts = () => {
         </div>
         <div className="containerForYandexMap">
           <iframe
+            title="contactUs"
             src="https://yandex.ru/map-widget/v1/?um=constructor%3A6544799b6e27f563b1269025c35d86012645043a322d04d7af52283c9138ab0a&amp;source=constructor"
             width="700"
             height="433"

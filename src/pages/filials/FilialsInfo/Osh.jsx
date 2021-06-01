@@ -27,6 +27,7 @@ const Osh = () => {
 
       <div className="containerForYandexMap">
         <iframe 
+        title="osh"
         src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad3b9f909a86fb063de4b54687973e7c5c64f9d1671d785c1501a93c6beba04a9&amp;source=constructor" 
         width="500" 
         height="400" 

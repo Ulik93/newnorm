@@ -31,7 +31,7 @@ export default function Equipments(props) {
     validateInfo,
     closeModal
   )
-  const { phone, address, first_name, company, email, files } = errors
+  const { phone, address, first_name, email } = errors
 
   var subtitle
   function openModal(title) {
@@ -64,7 +64,7 @@ export default function Equipments(props) {
               className="staffs_cards_item"
             >
               <div className="staffs_cards_item_img">
-                <img src={item.image} alt="image" />
+                <img src={item.image} alt="#" />
               </div>
               <div className="staffs_cards_item_description">
                 <div className="staffs_cards_item_title">{item.title}</div>
