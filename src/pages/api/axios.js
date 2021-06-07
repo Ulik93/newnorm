@@ -1,5 +1,3 @@
-
-
 import axios from "axios"
 
 let point = "https://norma-33eab-default-rtdb.firebaseio.com/"

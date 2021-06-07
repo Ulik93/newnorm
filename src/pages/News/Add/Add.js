@@ -56,40 +56,40 @@ function Add() {
       <div className="wrapper">
         <div className="container3">
           <div className="add">
-              <form action="https://54eef70ccd1a.ngrok.io/api/equipments/equipments/" method='POST' className="add__form">
+              <form action="#" className="add__form">
                 <h2 className="add__title add__place">Добавить новости</h2>
                 <div className="add__label add__data-label">
                   Дата
-                  {/* <input
+                  <input
                     className="form-control add__input add__date"
                     type="date"
                     onChange={changeHandler}
                     name="date"
-                    // value={news.date}
-                  /> */}
+                    value={news.date}
+                  />
                 </div>
                 <input
                   type="text"
                   className="form-control"
                   placeholder="Введите заголовок"
-                  // onChange={changeHandler}
-                  name="description"
-                  // value={news.title}
+                  onChange={changeHandler}
+                  name="title"
+                  value={news.title}
                 />
                 <textarea
                   className="form-control add__text"
                   placeholder="Напишите текст"
-                  // onChange={changeHandler}
-                  // value={news.text}
-                  name="title"
+                  onChange={changeHandler}
+                  value={news.text}
+                  name="text"
                 ></textarea>
                 <input
                   type="file"
                   className="form-control-file"
-                  name="image"
-                  // onChange={fileChangeHandler}
+                  name="file"
+                  onChange={fileChangeHandler}
                 />
-                <button className="btn btn-primary add__btn" type='submit'>
+                <button className="btn btn-primary add__btn" onClick={addNews}>
                   Добавить
                 </button>
               </form>
