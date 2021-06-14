@@ -15,9 +15,10 @@
 /* SIDEBAR */
 
 .equipments-nav_link {
-  display: grid;
+  /* display: grid;
   grid-template-columns: 330px auto;
-  column-gap: 40px;
+  column-gap: 40px; */
+  display: flex;
 }
 .equipment__sidebar {
   display: grid;

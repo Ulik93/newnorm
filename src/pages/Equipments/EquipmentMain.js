@@ -174,7 +174,7 @@ export default function EquipmentMain() {
   return (
     <BrowserRouter>
       <div className="equipments-nav_link">
-        <div className="equipment__sidebar">
+        {/* <div className="equipment__sidebar">
           <NavLink className="nav_link-items" to="/equipments">
             Терминалы сбора данных
           </NavLink>
@@ -193,13 +193,14 @@ export default function EquipmentMain() {
           <NavLink className="nav_link-items" to="/rashod">
             Расходные материалы
           </NavLink>
-        </div>
+        </div> */}
         <div>
           <Route path="/equipments">
             <Terminals data={staffs1} />
           </Route>
           <Route path="/scanners">
             <Scanners data={staffs2} />
+            {console.log(<Scanners />)}
           </Route>
           <Route path="/prom">
             <Prom data={staffs3} />
