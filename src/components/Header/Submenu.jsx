@@ -1,12 +1,12 @@
-import React from "react";
-import { NavLink } from "react-bootstrap";
-import "./Header.css";
+import React from "react"
+import { NavLink } from "react-router-dom"
+import "./Header.css"
 
 const Submenu = () => {
   const links = [
     {
       name: "Контрольная кассовая техника",
-      path: "/control",
+      path: "/equipments",
       tags: ["ПОРТ - 1000Ф", "ПОРТ - 600Ф", "ПОРТ - 100Ф"],
     },
     {
@@ -48,34 +48,27 @@ const Submenu = () => {
         "Argox OS-2130-SB printhead",
       ],
     },
-  ];
+  ]
   return (
     <div className="navbar__submenu">
       <div className="navbar__submenu-container">
-        {/* <NavLink to="/qaxsa" className="navbar__submenu-list" >
-          <li>{"xs"}</li>
-          
-        </NavLink> */}
-        <a href="/equipments">sws</a>
-        <a href="/control">sws</a>
-        <a href="/qwq">sws</a>
-        <a href="/qwq">sws</a>
-
-        <NavLink to="/w" className="navbar__submenu-list" >
-          <li>{'xs'}</li>
-          
-        </NavLink>{" "}
-        <NavLink to="/e" className="navbar__submenu-list" >
-          <li>{"item.name"}</li>
-
-        </NavLink>{" "}
-        <NavLink to="/r" className="navbar__submenu-list" >
-          <li>{"item.name"}</li>
-       
-        </NavLink>
+        {links.map((item, index) => {
+          return (
+            <NavLink
+              to={item.path}
+              className="navbar__submenu-list"
+              key={index}
+            >
+              <li>{item.name}</li>
+              {item.tags.map((el, i) => {
+                return <li key={i}>{el}</li>
+              })}
+            </NavLink>
+          )
+        })}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Submenu;
+export default Submenu
