@@ -8,9 +8,11 @@ export default function ForMarkirovka() {
 	const links = [
 		{ path: '/shoes', title: 'Обувь' },
 		{ path: '/tekstil', title: 'Текстиль' },
-		{ path: '', title: 'Алкоголь' },
-		{ path: '', title: 'Молоко' },
-	]
+		{ path: '/milk', title: 'Молоко' },
+		{ path: '/parfum', title: 'Парфюм' },
+		{ path: '/alcohol', title: 'Алкоголь' },
+		{ path: '/tabak', title: 'Табак' },
+	]	
 	useEffect(() => {
 		Aos.init({ duration: 3000 });
 	  },[]);

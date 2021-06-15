@@ -21,6 +21,10 @@ import License from "./pages/License/License"
 import Privacypolicy from "./pages/policy/privacypolicy"
 import Contacts from "./pages/ContactUs/ContactUs"
 import AboutUs from "./pages/About/aboutUs"
+import Tabak from "./pages/Tabak/Tabak"
+import Milk from "./pages/Milk/Milk"
+import Parfum from "./pages/Parfum/Parfum"
+
 
 function App() {
 
@@ -34,6 +38,9 @@ function App() {
         <Route path="/news/top" component={HeaderTop} />
         <Route path="/news/add" component={Add} />
         <Route path="/alcohol" component={Alcohol} exact />
+        <Route path="/parfum" component={Parfum} exact />
+        <Route path="/tabak" component={Tabak} exact />
+        <Route path="/milk" component={Milk} exact />
         <Route path="/tekstil" component={Tekstil} exact />
         <Route path="/shoes" component={Shoes} exact />
         <Route path="/equipments" component={EquipmentMain} exact />
