@@ -1,17 +1,17 @@
-import React, {useEffect} from "react";
-import "./MarkirovkaAbout.css";
-import Carousel from "react-bootstrap/Carousel";
-import img1 from "./pic1.png";
-import img2 from "./Rectangle 62.png";
-import img3 from "./Rectangle 63.png";
-import ref from "../../refToLk.js";
-import Aos from "aos";
-import "aos/dist/aos.css";
+import React, { useEffect } from "react"
+import "./MarkirovkaAbout.css"
+import Carousel from "react-bootstrap/Carousel"
+import img1 from "./pic1.png"
+import img2 from "./Rectangle 62.png"
+import img3 from "./Rectangle 63.png"
+import ref from "../../refToLk.js"
+import Aos from "aos"
+import "aos/dist/aos.css"
 
 export default function MarkirovkaAbout() {
   useEffect(() => {
-    Aos.init({ duration: 2000 });
-  },[]);
+    Aos.init({ duration: 2000 })
+  }, [])
   return (
     <div data-aos="fade-up" className="markirovkaAbout">
       <div className="markirovkaAbout_wrapper">
@@ -26,9 +26,10 @@ export default function MarkirovkaAbout() {
             Основной целью маркировки товаров является повышение защиты и
             снижение оборота фальсифицированной и контрафактной продукции.
           </div>
-          <div className='markirovkaAbout_btn1'>
+          <div className="markirovkaAbout_btn1">
             <a
-              href={ref}
+              href="http://lk.norma.kg/login"
+              target="_blank"
               style={{ marginBottom: 20 }}
               className="about_btn markirovkaAbout_btn"
             >
@@ -50,5 +51,5 @@ export default function MarkirovkaAbout() {
         {/* <div className='markirovkaAbout_img'></div> */}
       </div>
     </div>
-  );
+  )
 }
