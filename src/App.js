@@ -1,11 +1,10 @@
-
 import "./assets/css/index.css"
-import React from "react"
+import React, { useState } from "react"
 import Footer from "./components/Footer/Footer"
 import Header from "./components/Header/Header"
 import Main from "./pages/Main"
 import News from "./pages/News/News.js"
-import { BrowserRouter, Switch, Route} from "react-router-dom"
+import { BrowserRouter, Switch, Route } from "react-router-dom"
 import Alcohol from "./pages/Alcohol/Alcohol"
 import Tekstil from "./pages/Tekstil/Tekstil"
 import Shoes from "./pages/Shoes/Tekstil"
@@ -25,12 +24,12 @@ import Tabak from "./pages/Tabak/Tabak"
 import Milk from "./pages/Milk/Milk"
 import Parfum from "./pages/Parfum/Parfum"
 
-
 function App() {
+  const [equipmentSection, setEquipmentSection] = useState("main")
 
   return (
     <BrowserRouter>
-      <Header />
+      <Header setEquipmentSection={setEquipmentSection} />
       <Switch>
         <Route path="/" component={Main} exact />
         <Route path="/news" component={News} exact />
@@ -43,7 +42,12 @@ function App() {
         <Route path="/milk" component={Milk} exact />
         <Route path="/tekstil" component={Tekstil} exact />
         <Route path="/shoes" component={Shoes} exact />
-        <Route path="/equipments" component={EquipmentMain} exact />
+        <Route
+          path="/equipments"
+          component={() => (
+            <EquipmentMain equipmentSection={equipmentSection} />
+          )}
+        />
         <Route path="/filials" component={Filials} exact />
         <Route path="/contacts" component={Contacts} exact />
         <Route path="/about" component={AboutUs} exact />
@@ -53,11 +57,10 @@ function App() {
         <Route path="/News/:id" component={FullCard} />
         <Route path="/license" component={License} />
         <Route path="/policy" component={Privacypolicy} />
-
       </Switch>
       <Footer />
       {/* <a href='https://api.whatsapp.com/send?phone=+996501588882' target='_blank' rel='noopener noreferrer' className='fab fa-whatsapp' ></a> */}
     </BrowserRouter>
-  );
+  )
 }
-export default App;
+export default App

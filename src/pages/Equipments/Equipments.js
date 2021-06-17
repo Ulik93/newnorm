@@ -6,8 +6,7 @@ import Modal from "react-modal"
 import { useState } from "react"
 import useForm from "./useForm"
 import validateInfo from "./validate"
-import Button from '@material-ui/core/Button';
-
+import Button from "@material-ui/core/Button"
 
 const customStyles = {
   overlay: {
@@ -39,9 +38,9 @@ export default function Equipments(props) {
   function openModal(title, image) {
     setIsOpen(true)
     setTitle(title)
-    setSelectedProductInfo({productImage: image})
+    setSelectedProductInfo({ productImage: image })
   }
-  console.log(title);
+  console.log(title)
   function afterOpenModal() {
     // references are now sync'd and can be accessed.
     subtitle.style.color = "#000"
@@ -74,17 +73,16 @@ export default function Equipments(props) {
                 <div className="staffs_cards_item_desc">{item.desc}</div>
               </div>
               <div className="staffs_cards_item_btn">
-
-
                 <Button
-                color="red"
-                variant="contained" color="primary" href="#contained-buttons"
+                  color="red"
+                  variant="contained"
+                  color="primary"
+                  href="#contained-buttons"
                   className="about_btn staff_card_button"
                   onClick={() => openModal(item.title, item.image)}
                 >
                   Заказать
                 </Button>
-
               </div>
             </div>
           ))}
@@ -157,20 +155,6 @@ export default function Equipments(props) {
                 value={values.company}
               />
 
-               <label>Файлы:</label>
-              <input
-              multiple
-                className="modal__equipment-input"
-                type="file"
-                name="file"
-                placeholder="Название компании"
-                onChange={handleChange}
-              />
-              {company ? (
-                <p className="modal__eqipment-error">{company}</p>
-              ) : (
-                <br />
-              )}
               <label>Адрес:</label>
               <input
                 className="modal__equipment-input"
@@ -188,7 +172,11 @@ export default function Equipments(props) {
               <div>
                 Оборудование:
                 <span className="modal__equipment-name">{title}</span>
-                <img className="modal__image" src={selectedProductInfo.productImage} alt="image" />
+                <img
+                  className="modal__image"
+                  src={selectedProductInfo.productImage}
+                  alt="image"
+                />
               </div>
               <button
                 className="about_btn modal__equipment-btn"

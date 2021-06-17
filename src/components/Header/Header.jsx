@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom"
 import logo from "./flogo.jpeg"
 import Submenu from "./Submenu"
 
-export default function Header() {
+export default function Header({ setEquipmentSection }) {
   const links = [
     { title: "Главная", path: "/" },
     // { title: "Возможности", path: "/capabilities" },
@@ -46,7 +46,7 @@ export default function Header() {
                   exact
                 >
                   {item.title}
-                  <Submenu />
+                  <Submenu setEquipmentSection={setEquipmentSection} />
                 </NavLink>
               )
             } else {
@@ -68,7 +68,9 @@ export default function Header() {
             rel="noopener noreferrer"
             className="fas fa-phone-alt"
             href="tel:+996501588882"
-          >.</a>
+          >
+            .
+          </a>
           <span className="nav_lang">RU</span>
           <span className="login">
             <a

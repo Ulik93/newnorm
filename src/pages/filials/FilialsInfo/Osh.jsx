@@ -2,7 +2,7 @@ import React from "react"
 
 const Osh = () => {
   return (
-    <>
+    <React.Fragment>
       <span className="tittle">Ош</span>
       <span className="text">
         Ош являлся одним из религиозных мусульманских центров Средней Азии.
@@ -21,25 +21,20 @@ const Osh = () => {
         страны.
       </span>
 
-      <h4>
-        Адрес: Город Ош, ул. Касымбекова, д. 20Г
-      </h4>
+      <h4>Адрес: Город Ош, ул. Касымбекова, д. 20Г</h4>
 
       <div className="containerForYandexMap">
-        <iframe 
-        title="osh"
-        src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad3b9f909a86fb063de4b54687973e7c5c64f9d1671d785c1501a93c6beba04a9&amp;source=constructor" 
-        width="500" 
-        height="400" 
-        frameborder="0">
-        </iframe>
+        <iframe
+          title="osh"
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad3b9f909a86fb063de4b54687973e7c5c64f9d1671d785c1501a93c6beba04a9&amp;source=constructor"
+          width="500"
+          height="400"
+          frameborder="0"
+        ></iframe>
       </div>
 
-      <h3>
-        Номер: 0555 73 22 11
-      </h3>
-
-    </>
+      <h3>Номер: 0555 73 22 11</h3>
+    </React.Fragment>
   )
 }
 

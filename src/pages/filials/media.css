@@ -52,7 +52,7 @@
     max-width: 800px;
   }
   .text {
-    font-weight: 700;
+    font-weight: 500;
     font-size: 12px;
     padding-left: 150px;
     padding-top: 10px;
@@ -100,5 +100,28 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 570px) {
+  .filialLinksOsh div,
+  .filialLinksTalas div,
+  .filialLinksBatken div,
+  .filialLinksIssykKul div,
+  .filialLinksJalalAdad div,
+  .filialLinksNaryn div,
+  .filialLinksChuy div {
+    font-size: 25px;
+  }
+  .filials {
+    display: flex;
+    flex-flow: column;
+  }
+  .containerForFilials {
+    width: 100%;
+    order: 1;
+  }
+  .containerForInfo {
+    order: 2;
+  }
+  .text {
+    font-size: 12px;
+  }
 }

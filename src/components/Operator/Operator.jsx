@@ -19,13 +19,13 @@ export default function Operator() {
             ОФД - оператор фискальных данных
           </div>
           <div className="markirovkaAbout_info_desc">
-            ОФД-НН обеспечивает удобный и надежный сервис обработки и передачи
+            ОФД - НН обеспечивает удобный и надежный сервис обработки и передачи
             фискальных данных, систематизирует хранение данных.
           </div>
           <div className="markirovkaAbout_info-btn">
             <a
-              href="http://ofd.norma.kg/"
-              target='_blank'
+              href="http://lk.norma.kg/"
+              target="_blank"
               className="about_btn markirovkaAbout_btn operator_btn"
             >
               Подключить

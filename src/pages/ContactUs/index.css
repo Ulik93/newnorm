@@ -109,3 +109,11 @@ iframe {
     max-width: 340px;
   }
 }
+@media (max-width: 570px) {
+  .containerForYandexMap {
+    max-width: 320px;
+  }
+  .text {
+    font-size: 16px;
+  }
+}

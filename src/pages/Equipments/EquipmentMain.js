@@ -14,38 +14,41 @@ import img9 from "./images/10.png"
 import img10 from "./images/11.png"
 import img12 from "./images/13.png"
 import img15 from "./images/16.jpg"
-import urovo40 from './images/urovo40.jpg'
-import urovo30 from './images/urovo30.jpg'
-import printerTSC from './images/printerTSC.jpg'
-import port600 from './images/port600.jpg'
-import scan1 from './images/scan1.jpg'
-import scan2 from './images/scan2.jpg'
-import toshiba from './images/toshiba.jpg'
-import urovo600 from './images/urovo600.jpg'
-import urovo700 from './images/urovo700.jpg'
-import rashod1 from './images/rashod1.jpg'
-import rashod2 from './images/rashod2.png'
-import rashod3 from './images/rashod3.jpg'
-import rashod4 from './images/rashod4.jpg'
-import rashod5 from './images/rashod5.jpg'
-import rashod6 from './images/rashod6.jpg'
+import urovo40 from "./images/urovo40.jpg"
+import urovo30 from "./images/urovo30.jpg"
+import printerTSC from "./images/printerTSC.jpg"
+import port600 from "./images/port600.jpg"
+import scan1 from "./images/scan1.jpg"
+import scan2 from "./images/scan2.jpg"
+import toshiba from "./images/toshiba.jpg"
+import urovo600 from "./images/urovo600.jpg"
+import urovo700 from "./images/urovo700.jpg"
+import rashod1 from "./images/rashod1.jpg"
+import rashod2 from "./images/rashod2.png"
+import rashod3 from "./images/rashod3.jpg"
+import rashod4 from "./images/rashod4.jpg"
+import rashod5 from "./images/rashod5.jpg"
+import rashod6 from "./images/rashod6.jpg"
 import Rashod from "./Parts/Rashod"
 
-export default function EquipmentMain() {
+export default function EquipmentMain({ equipmentSection }) {
   const staffs1 = [
     {
       title: "Urovo DT50",
       desc: `ТЕРМИНАЛ СБОРА ДАННЫХ UROVO DT50 / DT50-SH3S9E4F00 / ANDROID 9.0 / 1.4 GHZ / 8ХCORE, CORTEX A53 / QUALCOMM SD 450 / RAM 2 GB / ROM 16 GB / HONEYWELL N6603 / 2D IMAGER / 5.7" / 720 X 1440 / 2G / 4G (LTE) / BLUETOOTH / GPS / GSM / WI-FI / 4300 MAH / NFC / СЕНСОР ОТПЕЧАТКА / IP 67 / 250 G / 6 КЛАВИШ`,
       image: img1,
+      section: "scanner",
     },
     {
       title: "Urovo DT30",
-      desc: 'ТЕРМИНАЛ СБОРА ДАННЫХ UROVO DT30 / DT30-AZ2S9E4000 / ANDROID 9.0 / 2D IMAGER / ZEBRA SE4710 (SOFT DECODE) / BLUETOOTH / WI-FI / GSM / 2G / 4G (LTE) / 4G (LTE) / GPS / NFC / RAM 2 GB / ROM 16 GB / ВОСЬМИЯДЕРНЫЙ / OCTA-CORE 1.4GHZ / 3.2" / 480 X 320 / 32 КЛАВИШИ / 4500MAH / 280 G / IP 67',
-      image: urovo30
+      desc:
+        'ТЕРМИНАЛ СБОРА ДАННЫХ UROVO DT30 / DT30-AZ2S9E4000 / ANDROID 9.0 / 2D IMAGER / ZEBRA SE4710 (SOFT DECODE) / BLUETOOTH / WI-FI / GSM / 2G / 4G (LTE) / 4G (LTE) / GPS / NFC / RAM 2 GB / ROM 16 GB / ВОСЬМИЯДЕРНЫЙ / OCTA-CORE 1.4GHZ / 3.2" / 480 X 320 / 32 КЛАВИШИ / 4500MAH / 280 G / IP 67',
+      image: urovo30,
     },
     {
       title: "UROVO DT40",
-      desc: 'ТЕРМИНАЛ СБОРА ДАННЫХ UROVO DT40 / DT40-SU3S9E4010 / ANDROID 9.0 / 1.8 GHZ / 8ХCORE, CORTEX A53 / QUALCOMM SD 450 / RAM 2 GB / ROM 16 GB / UROVO SE2030 / 2D IMAGER / 4.0" / 480 X 800 / 2G / 4G (LTE) / BLUETOOTH / GPS / GSM / WI-FI / 4500MAH / NFC / IP 67 / 240 G / 24 КЛАВИШИ',
+      desc:
+        'ТЕРМИНАЛ СБОРА ДАННЫХ UROVO DT40 / DT40-SU3S9E4010 / ANDROID 9.0 / 1.8 GHZ / 8ХCORE, CORTEX A53 / QUALCOMM SD 450 / RAM 2 GB / ROM 16 GB / UROVO SE2030 / 2D IMAGER / 4.0" / 480 X 800 / 2G / 4G (LTE) / BLUETOOTH / GPS / GSM / WI-FI / 4500MAH / NFC / IP 67 / 240 G / 24 КЛАВИШИ',
       image: urovo40,
     },
   ]
@@ -65,13 +68,13 @@ export default function EquipmentMain() {
       desc: `CКАНЕР ШТРИХ-КОДОВ IDZOR 9800 2D BLUETOOTH / C ПОДСТАВКОЙ / ID9800BT-2D / 2D IMAGE / USB / IP 54 / ДЛЯ ЕГАИС / BLUETOOTH`,
       image: scan2,
     },
-    
   ]
   const staffs3 = [
     {
       title: "TSC ML340P",
-      desc: 'Термопринтер этикеток TSC память 64Mb/128Mb качество печати 300 dpi скорость печати 127 мм/с ширина печати до 105,7 мм, интерфейс USB,RS-232, Ethernet,USB-Host. LCD. С отделителем этикеток.',
-      image: printerTSC
+      desc:
+        "Термопринтер этикеток TSC память 64Mb/128Mb качество печати 300 dpi скорость печати 127 мм/с ширина печати до 105,7 мм, интерфейс USB,RS-232, Ethernet,USB-Host. LCD. С отделителем этикеток.",
+      image: printerTSC,
     },
     {
       title: "Принтер печати на этикетках Printronix 8000",
@@ -79,7 +82,8 @@ export default function EquipmentMain() {
       image: img10,
     },
     {
-      title: "Принтер печати на этикетках Printronix 8000Термопринтер этикеток Toshiba B-EX4D2",
+      title:
+        "Принтер печати на этикетках Printronix 8000Термопринтер этикеток Toshiba B-EX4D2",
       desc: `Недорогой принтер, обладающий высоким качеством печати и большой производительностью.`,
       image: toshiba,
     },
@@ -151,7 +155,8 @@ export default function EquipmentMain() {
       image: rashod2,
     },
     {
-      title: "Этикетки полипропиленовые с шинным клеем BRADY 80мм х 44,5мм brdz113",
+      title:
+        "Этикетки полипропиленовые с шинным клеем BRADY 80мм х 44,5мм brdz113",
       desc: `Полипропиленовая этикетка с шинным клеем 80мм х 44,5мм, 1000 шт.`,
       image: rashod3,
     },
@@ -166,7 +171,8 @@ export default function EquipmentMain() {
       image: rashod5,
     },
     {
-      title: "Печатающая термоголовка Argox OS-2130-SB printhead 203dpi 23-80017-001",
+      title:
+        "Печатающая термоголовка Argox OS-2130-SB printhead 203dpi 23-80017-001",
       desc: `Печатающая головка для принтера Argox OS-2130-SB / OS-2130DE-SB, 203dpi (34588)`,
       image: rashod6,
     },
@@ -194,27 +200,14 @@ export default function EquipmentMain() {
             Расходные материалы
           </NavLink>
         </div> */}
-        <div>
-          <Route path="/equipments">
-            <Terminals data={staffs1} />
-          </Route>
-          <Route path="/scanners">
-            <Scanners data={staffs2} />
-            {console.log(<Scanners />)}
-          </Route>
-          <Route path="/prom">
-            <Prom data={staffs3} />
-          </Route>
-          <Route path="/control">
-            <ControlTech data={staffs4} />
-          </Route>
-          <Route path="/printer">
-            <Printers data={staff5}/>
-          </Route>
-          <Route path="/rashod">
-            <Rashod data={staff6}/>
-          </Route>
-        </div>
+        <Route path="/equipments">
+          {equipmentSection === "main" && <Terminals data={staffs1} />}
+          {equipmentSection === "scanner" && <Scanners data={staffs2} />}
+          {equipmentSection === "prom" && <Prom data={staffs3} />}
+          {equipmentSection === "control" && <ControlTech data={staffs4} />}
+          {equipmentSection === "printer" && <Printers data={staff5} />}
+          {equipmentSection === "rashod" && <Rashod data={staff6} />}
+        </Route>
       </div>
     </BrowserRouter>
   )

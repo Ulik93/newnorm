@@ -2,7 +2,7 @@ import React from "react"
 
 const Chuy = () => {
   return (
-    <>
+    <React.Fragment>
       <span className="tittle">Чуй</span>
       <span className="text">
         Город был основан в 1877 году русскими переселенцами в центральной части
@@ -13,7 +13,7 @@ const Chuy = () => {
         подчинения[3]. В город Талас 2 февраля 1987 года включено село Джаны-Чек
         из сельсовета Сорок лет Октября Таласского района[4].
       </span>
-    </>
+    </React.Fragment>
   )
 }
 
