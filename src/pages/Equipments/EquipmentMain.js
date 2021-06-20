@@ -14,6 +14,7 @@ import img9 from "./images/10.png"
 import img10 from "./images/11.png"
 import img12 from "./images/13.png"
 import img15 from "./images/16.jpg"
+import brisklyImg from "./images/briskly.jpeg"
 import urovo40 from "./images/urovo40.jpg"
 import urovo30 from "./images/urovo30.jpg"
 import printerTSC from "./images/printerTSC.jpg"
@@ -124,6 +125,19 @@ export default function EquipmentMain({ equipmentSection }) {
           Можно подключить любое периферийное устройство.
           Удобна смена кассовой ленты.`,
       image: img15,
+    },
+    {
+      title: "Микромаркет Briskly",
+      desc: `Холодильник.
+
+      Модуль Briskly для подключения к платформе.
+      
+      Электронный замок.
+      
+      Интеграция в приложение B-Pay.
+      
+      Оклейка микромаркета в дизайне B-Pay.`,
+      image: brisklyImg,
     },
   ]
   const staff5 = [

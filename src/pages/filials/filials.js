@@ -29,37 +29,39 @@ const Filials = () => {
 
   return (
     <div className="filials">
-      <span className="containerForLinks">
-        <Link to="#">
-          <div className="link">о нас</div>
-        </Link>
-        <Link to="#">
-          <div className="link">адресс</div>
-        </Link>
-        <Link to="#">
-          <div className="link">контакты</div>
-        </Link>
-      </span>
-      <div className="containerForInfo">
-        {currentState === "Osh" && <Osh />}
-        {currentState === "Talas" && <Talas />}
-        {currentState === "Batken" && <Batken />}
-        {currentState === "IssykKul" && <YssykKol />}
-        {currentState === "JalalAdad" && <JalalAbad />}
-        {currentState === "Naryn" && <Naryn />}
-        {currentState === "Chuy" && <Chuy />}
-      </div>
-      <div className="containerForFilials">
-        {filialsName.map((item, index) => {
-          return (
-            <SingleFilial
-              setCurrentState={setCurrentState}
-              currentState={currentState}
-              name={item.name}
-              text={item.text}
-            />
-          )
-        })}
+      <div className="filials-1">
+        {/* <span className="containerForLinks">
+          <Link to="#">
+            <div className="link">о нас</div>
+          </Link>
+          <Link to="#">
+            <div className="link">адресс</div>
+          </Link>
+          <Link to="#">
+            <div className="link">контакты</div>
+          </Link>
+        </span> */}
+        <div className="containerForInfo">
+          {currentState === "Osh" && <Osh />}
+          {currentState === "Talas" && <Talas />}
+          {currentState === "Batken" && <Batken />}
+          {currentState === "IssykKul" && <YssykKol />}
+          {currentState === "JalalAdad" && <JalalAbad />}
+          {currentState === "Naryn" && <Naryn />}
+          {currentState === "Chuy" && <Chuy />}
+        </div>
+        <div className="containerForFilials">
+          {filialsName.map((item, index) => {
+            return (
+              <SingleFilial
+                setCurrentState={setCurrentState}
+                currentState={currentState}
+                name={item.name}
+                text={item.text}
+              />
+            )
+          })}
+        </div>
       </div>
     </div>
   )

@@ -38,7 +38,7 @@ const Batken = () => {
           return (
             <Carousel.Item>
               <img
-                className="d-block w-100"
+                className="d-block w"
                 key={index}
                 src={item}
                 alt="First slide"
