@@ -45,7 +45,10 @@ function App() {
         <Route
           path="/equipments"
           component={() => (
-            <EquipmentMain equipmentSection={equipmentSection} />
+            <EquipmentMain
+              equipmentSection={equipmentSection}
+              setEquipmentSection={setEquipmentSection}
+            />
           )}
         />
         <Route path="/filials" component={Filials} exact />
