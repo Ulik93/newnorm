@@ -32,7 +32,10 @@ import rashod5 from "./images/rashod5.jpg"
 import rashod6 from "./images/rashod6.jpg"
 import Rashod from "./Parts/Rashod"
 
-export default function EquipmentMain({ equipmentSection }) {
+export default function EquipmentMain({
+  equipmentSection,
+  setEquipmentSection,
+}) {
   const staffs1 = [
     {
       title: "Urovo DT50",
@@ -194,26 +197,44 @@ export default function EquipmentMain({ equipmentSection }) {
   return (
     <BrowserRouter>
       <div className="equipments-nav_link">
-        {/* <div className="equipment__sidebar">
-          <NavLink className="nav_link-items" to="/equipments">
+        <div className="equipment__sidebar">
+          <div
+            className="nav_link-items"
+            onClick={() => setEquipmentSection("main")}
+          >
             Терминалы сбора данных
-          </NavLink>
-          <NavLink className="nav_link-items" to="/scanners">
+          </div>
+          <div
+            className="nav_link-items"
+            onClick={() => setEquipmentSection("scanner")}
+          >
             2д сканеры
-          </NavLink>
-          <NavLink className="nav_link-items" to="/prom">
+          </div>
+          <div
+            className="nav_link-items"
+            onClick={() => setEquipmentSection("prom")}
+          >
             Промышленное оборудование
-          </NavLink>
-          <NavLink className="nav_link-items" to="/control">
+          </div>
+          <div
+            className="nav_link-items"
+            onClick={() => setEquipmentSection("control")}
+          >
             Контрольно кассовая машина
-          </NavLink>
-          <NavLink className="nav_link-items" to="/printer">
+          </div>
+          <div
+            className="nav_link-items"
+            onClick={() => setEquipmentSection("printer")}
+          >
             Принтеры
-          </NavLink>
-          <NavLink className="nav_link-items" to="/rashod">
+          </div>
+          <div
+            className="nav_link-items"
+            onClick={() => setEquipmentSection("rashod")}
+          >
             Расходные материалы
-          </NavLink>
-        </div> */}
+          </div>
+        </div>
         <Route path="/equipments">
           {equipmentSection === "main" && <Terminals data={staffs1} />}
           {equipmentSection === "scanner" && <Scanners data={staffs2} />}
