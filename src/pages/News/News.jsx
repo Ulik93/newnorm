@@ -1,95 +1,96 @@
-import React, { useEffect, useState } from "react";
-import putinImg from "./putin.jpg";
-import sliderPhoto1 from "./sliderPhoto1.jpg";
-import sliderPhoto2 from "./sliderPhoto2.jpg";
-import sliderPhoto3 from "./sliderPhoto3.jpg";
-import teamSliderPhoto1 from "./teamSliderPhoto1.jpg";
-import teamSliderPhoto2 from "./teamSliderPhoto2.jpg";
-import teamSliderPhoto3 from "./teamSliderPhoto3.jpg";
-import video from "./marking.mp4";
-import threeD from "./video/01032021-video_WDfzl0Z4.mp4";
-import threeD1 from "./images/01.03.2021-1.jpg";
-import threeD2 from "./images/01.03.2021-2.jpg";
-import threeD3 from "./images/01.03.2021-3.jpg";
-import threeD4 from "./images/01.03.2021-4.jpg";
-import dordoi from "./images/dordoi.jpeg";
-import dordoi1 from "./images/dordoi1.jpg";
-import vyezdpic from "./images/dordoi2.jpg";
-import vyezdpic1 from "./images/dordoi3.jpg";
-import vyezdintDordoi from "./video/vyezd-int.mp4";
-import alatooPic from "./images/ala-too.jpeg";
-import alatooPic1 from "./images/ala-too1.jpeg";
-import firstmark from "./images/firstmark.jpg";
-import oshVideo from "./video/osh-video.mp4";
-import forumVideo from "./video/forum.mp4";
-import sertificateOsh from "./images/вручениеОш.jpg";
-import picMart from "./images/8marta.jpg";
-import NewYear from "./images/s-novym-godom.jpg";
-import ayima1 from "./images/champ1Ayima.jpg";
-import ayima2 from "./images/champ2Ayima.jpg";
-import picConKg1 from "./images/conkg1.jpg";
-import picConKg2 from "./images/conkg2.jpg";
-import PresVideo from "./images/ConnectPresVideo.mp4";
-import picCon1 from "./images/connectPres1.jpg";
-import picCon2 from "./images/connectPres2.jpg";
-import pic18031 from "./images/18.03.jpg";
-import pic18032 from "./images/18.03-2.jpg";
-import nooruz from "./images/nooruz.jpg";
-import pic128032021 from "./images/IMG_1.JPG";
-import pic228032021 from "./images/IMG_2.JPG";
-import pic328032021 from "./images/IMG_3.JPG";
-import pic428032021 from "./images/IMG_4.JPG";
-import kgtu from "./images/kgtu.jpg";
-import codify1 from "./images/180421.jpg";
-import codify2 from "./images/1804211.jpg";
-import codify3 from "./images/1804212.jpg";
-import codify4 from "./images/1804213.jpg";
-import "./News.css";
-import "./style.css";
-import Aos from "aos";
-import "aos/dist/aos.css";
-import axios from "axios";
-import Card from "./card/Card";
-import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-import Loader from "react-loader-spinner";
+import React, { useEffect, useState } from "react"
+import putinImg from "./putin.jpg"
+import sliderPhoto1 from "./sliderPhoto1.jpg"
+import sliderPhoto2 from "./sliderPhoto2.jpg"
+import sliderPhoto3 from "./sliderPhoto3.jpg"
+import teamSliderPhoto1 from "./teamSliderPhoto1.jpg"
+import teamSliderPhoto2 from "./teamSliderPhoto2.jpg"
+import teamSliderPhoto3 from "./teamSliderPhoto3.jpg"
+import video from "./marking.mp4"
+import threeD from "./video/01032021-video_WDfzl0Z4.mp4"
+import threeD1 from "./images/01.03.2021-1.jpg"
+import threeD2 from "./images/01.03.2021-2.jpg"
+import threeD3 from "./images/01.03.2021-3.jpg"
+import threeD4 from "./images/01.03.2021-4.jpg"
+import dordoi from "./images/dordoi.jpeg"
+import dordoi1 from "./images/dordoi1.jpg"
+import vyezdpic from "./images/dordoi2.jpg"
+import vyezdpic1 from "./images/dordoi3.jpg"
+import vyezdintDordoi from "./video/vyezd-int.mp4"
+import alatooPic from "./images/ala-too.jpeg"
+import alatooPic1 from "./images/ala-too1.jpeg"
+import firstmark from "./images/firstmark.jpg"
+import oshVideo from "./video/osh-video.mp4"
+import forumVideo from "./video/forum.mp4"
+import sertificateOsh from "./images/вручениеОш.jpg"
+import picMart from "./images/8marta.jpg"
+import NewYear from "./images/s-novym-godom.jpg"
+import ayima1 from "./images/champ1Ayima.jpg"
+import ayima2 from "./images/champ2Ayima.jpg"
+import picConKg1 from "./images/conkg1.jpg"
+import picConKg2 from "./images/conkg2.jpg"
+import PresVideo from "./images/ConnectPresVideo.mp4"
+import picCon1 from "./images/connectPres1.jpg"
+import picCon2 from "./images/connectPres2.jpg"
+import pic18031 from "./images/18.03.jpg"
+import pic18032 from "./images/18.03-2.jpg"
+import nooruz from "./images/nooruz.jpg"
+import pic128032021 from "./images/IMG_1.JPG"
+import pic228032021 from "./images/IMG_2.JPG"
+import pic328032021 from "./images/IMG_3.JPG"
+import pic428032021 from "./images/IMG_4.JPG"
+import kgtu from "./images/kgtu.jpg"
+import codify1 from "./images/180421.jpg"
+import codify2 from "./images/1804211.jpg"
+import codify3 from "./images/1804212.jpg"
+import codify4 from "./images/1804213.jpg"
+import "./News.css"
+import "./style.css"
+import Aos from "aos"
+import "aos/dist/aos.css"
+import axios from "axios"
+import Card from "./card/Card"
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
+import Loader from "react-loader-spinner"
+import { getNewNews } from "../api/callbackAPI"
 
 export default function News() {
-  const [state, setState] = useState({});
+  const [state, setState] = useState({})
   let dateStateArr,
-    sumDateState = [];
+    sumDateState = []
   useEffect(() => {
     axios
       .get("https://norma-33eab-default-rtdb.firebaseio.com/news.json")
       .then((r) => {
-        setState(r.data);
-      });
-    Aos.init({ duration: 2000 });
-    window.scrollTo(0, 0);
-  }, []);
+        setState(r.data)
+      })
+
+    Aos.init({ duration: 2000 })
+    window.scrollTo(0, 0)
+  }, [])
   if (Object.keys(state).length > 0 && !!state) {
     dateStateArr = Object.keys(state).map((post) => {
-      return state[post].date.split("-");
-    });
+      return state[post].date.split("-")
+    })
     dateStateArr.map((date) => {
       let sumNumber = date.reduce((acc, number) => {
-        return acc + parseInt(number);
-      }, 0);
-      sumDateState.push(sumNumber);
-    });
+        return acc + parseInt(number)
+      }, 0)
+      sumDateState.push(sumNumber)
+    })
     sumDateState.sort((a, b) => {
-      return b - a;
-    });
-    console.log(sumDateState);
+      return b - a
+    })
   }
   useEffect(() => {
     axios
       .get("https://norma-33eab-default-rtdb.firebaseio.com/news.json")
       .then((r) => {
-        setState(r.data);
-      });
-  }, []);
+        setState(r.data)
+      })
+  }, [])
 
-  const Date = "16.03.2021";
+  const Date = "16.03.2021"
   return (
     <div className="news">
       <div data-aos="fade-up" className="news_title">
@@ -1182,5 +1183,5 @@ export default function News() {
         </div>
       </div>
     </div>
-  );
+  )
 }

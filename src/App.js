@@ -3,7 +3,7 @@ import React, { useState } from "react"
 import Footer from "./components/Footer/Footer"
 import Header from "./components/Header/Header"
 import Main from "./pages/Main"
-import News from "./pages/News/News.js"
+import News from "./pages/News/News.jsx"
 import { BrowserRouter, Switch, Route } from "react-router-dom"
 import Alcohol from "./pages/Alcohol/Alcohol"
 import Tekstil from "./pages/Tekstil/Tekstil"
@@ -13,6 +13,7 @@ import Filials from "./pages/filials/filials"
 import Projects from "./pages/projects/projects.js"
 import HeaderTop from "./pages/News/components/HeaderTop"
 import Add from "./pages/News/Add/Add"
+import NewAdd from "./pages/News/Add/NewAdd"
 import New from "./pages/News/New.jsx"
 import SignUp from "./pages/Sign/SignUp/SignUp"
 import FullCard from "./pages/News/FullCard/FullCard"
@@ -36,6 +37,7 @@ function App() {
         <Route path="/projects" component={Projects} exact />
         <Route path="/news/top" component={HeaderTop} />
         <Route path="/news/add" component={Add} />
+        <Route path="/news/addd" component={NewAdd} />
         <Route path="/alcohol" component={Alcohol} exact />
         <Route path="/parfum" component={Parfum} exact />
         <Route path="/tabak" component={Tabak} exact />
